@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body,html,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,tr,dl,dt,dd,form,fieldset,legend,input,textarea,select,button,
+img,a,span,i,strong{margin:0;padding:0;}
+/*body{font:"Microsoft YaHei","Arial Narrow",HELVETICA;overflow-x:hidden;}*/
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
+
+body{
+	font: 12px/22px 'Microsoft Yahei',Helvetica,Arial,STXihei,SimSun,sans-serif;
+	color: #3e3e3e;
+	background: #fff;
+	overflow-x:hidden;
+}
+a{text-decoration:none;}
+i,em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+input,button{outline:none;}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+.ind{text-indent:2em}
+.ind10{text-indent:10px;}
+.noborder{border:0;}
+.clearfix:after{content:'.';display:block; height:0; overflow:hidden; clear:both;visibility:hidden;}

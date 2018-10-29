@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script type="text/javascript" src='js/jquery-1.12.3.js'></script>
+		<script type="text/javascript" src='js/head.js'></script>
+		<script type="text/javascript" src='js/jquery.cookie.js'></script>
+		<script type="text/javascript" src='js/gVerify.js'></script>
+		<script type="text/javascript" src='js/login.js'></script>
+			
+	</head>
+	<body>
+		<!--页面头部导航-->
+		<div id='top_wrap'>
+			<div class='top_header'>
+				<div class='top_header_left'>
+					<span>欢迎光临莎莎网！</span>
+					<a href='login.html' class='top_header_login'>登录</a>
+					<span>或</span>
+					<a href='register.html'>免费注册</a>
+				</div>
+				<div class='top_header_right'>
+					<ul class='header_right_list clearfix'>
+						<li id='attention'>
+							<div class='noline'>
+								<img src='images/sasa_wechat.jpg' />
+							</div>
+							<span>关注我们</span>
+							<i class='top_wechat'></i>
+							<i class='top_microblog'></i>	
+							
+						</li>
+						<li>Global site</li>
+						<li>积分中心</li>
+						<li>我的站内信</li>
+						<li>
+							<i class='iconfont'>&#xe761;</i>
+							<span>我的收藏</span>	
+						</li>
+						<li id='cartLi'>
+							<div id='myCart'>
+								<div class='empty'>
+									购物车中还没有商品，<br />快去挑选心爱的商品吧
+								</div>
+							</div>
+							<i class='iconfont'>&#xe73d;</i>
+							<span>我的购物车</span>	
+						</li>
+						<li id='account_li'>
+							<div class='account'>
+								<ul>
+									<li>
+										<a href='#'>我的订单</a>
+									</li>
+									<li>
+										<a href='#'>我的积分</a>
+									</li>
+									<li>
+										<a href='#'>我的优惠券</a>
+									</li>
+									<li>
+										<a href='#'>我的收藏</a>
+									</li>
+									<li>
+										<a href='#'>我的评价</a>
+									</li>
+								</ul>
+							</div>
+							<i class='iconfont'>&#xe638;</i>
+							<span>我的账户</span>	
+							<i class='iconfont sw-resize'>&#xe772;</i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id='main_wrap'>
+			<!--logo-->
+			<div class='logo_wrap'>
+				<div class='logo'>
+					<h3><a href='#'>欢迎来到莎莎官网</a></h3>
+				</div>
+			</div>
+			<!--注册-->
+			<div class='login_wrap clearfix'>
+				<div class='bg_login'></div>
+				<div class='signup-article'>
+					<div class='sign-title-text'>
+						<h3>用户登录</h3>
+						<a href='register.html' target="_blank">立即注册</a>
+						<span>还没有莎莎账号？</span>
+						
+					</div>
+					<div class='signupbox'>
+						<form>
+							<p class='form-act bg_icon'>
+								<input type="text" id='username' placeholder="邮箱/手机" />
+							</p>
+							<p class='reminder'></p>
+							<p class='form-act bg_icon'>
+								<input type="password" id='opass' placeholder="填写密码" />
+							</p>
+							<p class='reminder'></p>
+							<p class='form-act action-verifycode' style='position: relative;'>
+								<input type="text" placeholder="填写验证码" id='text-code'/>
+								<div id='code' style='position: absolute;'></div>
+								<a href='javascript:;' id='change'>看不清?换一张</a>
+							</p>
+							<p class='reminder'></p>
+							<label class='form-sub-label'>
+								<input type='checkbox' id='remember_pw'/>记住我
+								<a href='#'>忘记密码?</a>
+								
+							</label>
+							<p class='btn_submit'>
+								<button id='btn'>登录</button>
+							</p>
+							
+							<div class='other-login'>
+								<h3>第三方登录</h3>
+								<ul>
+									<li>
+										<a href='#'><img src='images/login01.jpg'>QQ登录</a>
+									</li>
+									<li>
+										<a href='#'><img src='images/login02.jpg'>微博登录</a>
+									</li>
+									<li>
+										<a href='#'><img src='images/login03.jpg'>支付宝登录</a>
+									</li>
+								</ul>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='login_success'>
+			登录成功即将为你跳转页面
+			<div class='loading'></div>
+		</div>
+	
+	</body>
+</html>

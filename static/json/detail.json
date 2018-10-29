@@ -1,0 +1,106 @@
+
+[	
+	{
+		"id":0,
+		"smallImg":["images/list1_1_1.jpg","images/list1_1_2.jpg","images/list1_1_3.jpg","images/list1_1_4.jpg",
+		"images/list1_1_5.jpg"],
+		"middleImg":["images/list1_2_1.jpg","images/list1_2_2.jpg","images/list1_2_3.jpg","images/list1_2_4.jpg",
+		"images/list1_2_5.jpg"],
+		"bigImg":["images/list1_3_1.jpg","images/list1_3_2.jpg","images/list1_3_3.jpg","images/list1_3_4.jpg",
+		"images/list1_3_5.jpg"],
+		"title":"CYBER COLORS",
+		"quality":"鳄梨油润唇膏(3.6克)",
+		"newPrice":"￥52.0",
+		"oldPrice":"￥77.0"
+	},
+	{
+		"id":1,
+		"smallImg":["images/list2_1_1.jpg","images/list2_1_2.jpg","images/list2_1_3.jpg"],
+		"middleImg":["images/list2_2_1.jpg","images/list2_2_2.jpg","images/list2_2_3.jpg"],
+		"bigImg":["images/list2_2_1.jpg","images/list2_2_2.jpg","images/list2_2_3.jpg"],
+		"title":"伊丽莎白 · 雅顿",
+		"quality":"8小时系列经典润泽唇膏SPF15(3.7克)",
+		"newPrice":"￥103.0",
+		"oldPrice":" ￥110.0"
+	},
+	{
+		"id":2,
+		"smallImg":["images/list3_1_1.jpg","images/list3_1_2.jpg","images/list3_1_3.jpg"],
+		"middleImg":["images/list3_2_1.jpg","images/list3_2_2.jpg","images/list3_2_3.jpg"],
+		"bigImg":["images/list3_2_1.jpg","images/list3_2_2.jpg","images/list3_2_3.jpg"],
+		"title":"科颜氏",
+		"quality":"护唇膏一号 (薄荷香)(15毫升)",
+		"newPrice":"￥79.0",
+		"oldPrice":"￥88.0"
+	},
+	{
+		"id":3,
+		"smallImg":["images/list4_1_1.jpg","images/list4_1_2.jpg","images/list4_1_3.jpg"],
+		"middleImg":["images/list2_2_1.jpg","images/list2_2_2.jpg","images/list2_2_3.jpg"],
+		"bigImg":["images/list2_2_1.jpg","images/list2_2_2.jpg","images/list2_2_3.jpg"],
+		"title":"科颜氏",
+		"quality":"护唇膏一号 (原味)(15毫升)",
+		"newPrice":"￥75.0",
+		"oldPrice":"￥88.0"
+	},
+	{
+		"id":4,
+		"smallImg":["images/list5_1_1.jpg","images/list5_1_2.jpg","images/list5_1_3.jpg"],
+		"middleImg":["images/list5_2_1.jpg","images/list5_2_2.jpg","images/list5_2_3.jpg"],
+		"bigImg":["images/list5_2_1.jpg","images/list5_2_2.jpg","images/list5_2_3.jpg"],
+		"title":"谜尚小黄人蜡笔气垫口红 #RD01 樱桃红",
+		"quality":"2.5克   #RD01樱桃红",
+		"newPrice":"￥45.0",
+		"oldPrice":"￥100.0"
+	},
+	{
+		"id":5,
+		"smallImg":["images/list6_1_1.jpg","images/list6_1_2.jpg","images/list6_1_3.jpg"],
+		"middleImg":["images/list6_2_1.jpg","images/list6_2_2.jpg","images/list6_2_3.jpg"],
+		"bigImg":["images/list6_2_1.jpg","images/list6_2_2.jpg","images/list6_2_3.jpg"],
+		"title":"圣罗兰纯口红 #49 Rose Tropical",
+		"quality":"3.8克  #49 Rose Tropical",
+		"newPrice":"￥269.0",
+		"oldPrice":"￥320.0"
+	},
+	{
+		"id":6,
+		"smallImg":["images/list7_1_1.jpg","images/list7_1_2.jpg","images/list7_1_3.jpg"],
+		"middleImg":["images/list7_2_1.jpg","images/list7_2_2.jpg","images/list7_2_3.jpg"],
+		"bigImg":["images/list7_2_1.jpg","images/list7_2_2.jpg","images/list7_2_3.jpg"],
+		"title":"嘉娜宝唇膏 COFFRET D’OR晶漾诱色口红",
+		"quality":"15毫克 #265 PINK",
+		"newPrice":"￥133.0",
+		"oldPrice":"￥180.0"
+	},
+	{
+		"id":7,
+		"smallImg":["images/list8_1_1.jpg","images/list8_1_2.jpg","images/list8_1_3.jpg"],
+		"middleImg":["images/list8_2_1.jpg","images/list8_2_2.jpg","images/list8_2_3.jpg"],
+		"bigImg":["images/list8_2_1.jpg","images/list8_2_2.jpg","images/list8_2_3.jpg"],
+		"title":"娇兰亲亲滋润护唇膏 #R371 Morning Rose",
+		"quality":"2.8克 #R371 Morning Rose",
+		"newPrice":"￥210.0",
+		"oldPrice":"￥320.0"
+	},
+	{
+		"id":8,
+		"smallImg":["images/list9_1_1.jpg","images/list9_1_2.jpg","images/list9_1_3.jpg"],
+		"middleImg":["images/list9_2_1.jpg","images/list9_2_2.jpg","images/list9_2_3.jpg"],
+		"bigImg":["images/list9_2_1.jpg","images/list9_2_2.jpg","images/list9_2_3.jpg"],
+		"title":"LABIOTTECHATEAU LABIOTTE WINE 红酒口红",
+		"quality":"3.7 克 PK01",
+		"newPrice":"￥125.0",
+		"oldPrice":"￥158.0"
+	},
+	{
+		"id":9,
+		"smallImg":["images/list10_1_1.jpg","images/list10_1_2.jpg","images/list10_1_3.jpg"],
+		"middleImg":["images/list10_2_1.jpg","images/list10_2_2.jpg","images/list10_2_3.jpg"],
+		"bigImg":["images/list10_2_1.jpg","images/list10_2_2.jpg","images/list10_2_3.jpg"],
+		"title":"fresh澄糖滋润护唇膏 花漾裸粉",
+		"quality":"4.3克 花漾裸粉",
+		"newPrice":"￥199.0",
+		"oldPrice":"￥220.0"
+	}
+]

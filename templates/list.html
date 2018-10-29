@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>列表页</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+		<script type="text/javascript" src='js/jquery-1.12.3.js'></script>
+		<script type="text/javascript" src='js/jquery.cookie.js'></script>
+		<script type="text/javascript" src='js/jquery.fly.min.js'></script>
+		<script type="text/javascript" src='js/head.js'></script>
+		<script type="text/javascript" src='js/list.js'></script>
+			
+		
+			
+	</head>
+	<body>
+			<!--页面头部导航-->
+		<div id='top_wrap'>
+			<div class='top_header'>
+				<div class='top_header_left'>
+					<span>欢迎光临莎莎网！</span>
+					<a href='#' class='top_header_login'>登录</a>
+					<span>或</span>
+					<a href='#'>免费注册</a>
+				</div>
+				<div class='top_header_right'>
+					<ul class='header_right_list clearfix'>
+						<li id='attention'>
+							<div class='noline'>
+								<img src='images/sasa_wechat.jpg' />
+							</div>
+							<span>关注我们</span>
+							<i class='top_wechat'></i>
+							<i class='top_microblog'></i>	
+							
+						</li>
+						<li>Global site</li>
+						<li>积分中心</li>
+						<li>我的站内信</li>
+						<li>
+							<i class='iconfont'>&#xe761;</i>
+							<span>我的收藏</span>	
+						</li>
+						<li id='cartLi'>
+							<!--没商品时显示-->
+							<div id='myCart'>
+								<div class='empty'>
+									购物车中还没有商品，<br />快去挑选心爱的商品吧
+								</div>
+							</div>
+							<!--有商品显示-->
+							<div class='miniCarDetail'>
+								<ul class='miniCarDetail_list'>
+									<!--<li>
+										<dl class='miniCarDetail_dl'>
+											<dt><a href='javascript:;'><img src='images/list1_1_1.jpg' /></a></dt>
+											<dd>
+												<p class='h_title'>科颜氏护唇膏一号 (薄荷香)科颜氏护唇膏一号 (薄荷香)</p>
+												<p class='price_p'>
+													<span class='x_price'>￥111.0</span>
+													<span class='x_num'>x1</span>
+													<span class='deleteicon'><i class='iconfont'>&#xe63f;</i></span>
+												</p>
+											</dd>
+										</dl>
+									</li>-->
+								</ul>
+								<div class='go_cart'><a href='basket.html'>进入购物车</a></div>
+							</div>
+							<i class='iconfont'>&#xe73d;</i>
+							<span>我的购物车</span>	
+						</li>
+						<li id='account_li'>
+							<div class='account'>
+								<ul>
+									<li>
+										<a href='#'>我的订单</a>
+									</li>
+									<li>
+										<a href='#'>我的积分</a>
+									</li>
+									<li>
+										<a href='#'>我的优惠券</a>
+									</li>
+									<li>
+										<a href='#'>我的收藏</a>
+									</li>
+									<li>
+										<a href='#'>我的评价</a>
+									</li>
+								</ul>
+							</div>
+							<i class='iconfont'>&#xe638;</i>
+							<span>我的账户</span>	
+							<i class='iconfont sw-resize'>&#xe772;</i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--菜单搜索-->
+		<div id='header_main_wrap'>
+			<div class='header_main'>
+				<div class='header_main_top clearfix'>
+					<div class='logo'>
+						<h3>
+							<a href='#'>欢迎来到莎莎网！</a>
+						</h3>
+					</div>
+					<div class='top_server_box'>
+						<div class='top_server clearfix'>
+							<form action="" method="">
+								<input type='text' placeholder='雅诗兰黛' />
+								<button type='submit'>搜索</button>
+							</form>
+						</div>
+						<p class='server_nav'>
+							<a href='#' class='padding_left'>精华</a>
+							<a href='#'>保湿</a>
+							<a href='#'>面霜</a>
+							<a href='#'>眼霜</a>
+							<a href='#'>资生堂</a>
+							<a href='#'>补水</a>
+							<a href='#' class='noborder'>瑞士葆丽美</a>
+						</p>
+					</div>
+				</div>
+				<div class='header_main_btm clearfix'>
+					<div class='sub_items' id='sub_items'>
+						<div class='sasa_category'>
+							<ul class='sasa_category_ul' id='sasa_category_ul'>
+								<li class='sasa_category_item'>
+									
+									<div class='sasa_category_sidebox'>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>洁面/磨砂</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>泡沫洁面乳</a>
+												<a href='#'>洁面摩丝</a>
+												<a href='#'>洁面啫喱</a>
+												<a href='#'>洁面奶</a>
+												<a href='#'>洁面皂</a>
+												<a href='#'>洁面粉</a>
+												<a href='#'>磨砂膏</a>
+												<a href='#'>磨砂啫喱</a>
+												<a href='#'>泡沫洁面乳</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>美容工具</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>化妆棉</a>
+												<a href='#'>洁面扑</a>
+												<a href='#'>洁面扫</a>
+												<a href='#'>压缩面膜纸</a>
+												<a href='#'>油面纸</a>
+												<a href='#'>镜子</a>
+												<a href='#'>面部按摩工具</a>
+												<a href='#'>高端美容仪器</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+									</div>
+									<div class='sasa_category_item_inner clearfix'>
+										<i class='iconfont more_category_l'>&#xe663;</i>
+										<span class='sasa_category_item_span'><a href='#'>面部护肤</a></span>
+										<i class='iconfont more_category_r'>&#xe775;</i>
+									</div>
+								</li>
+								<li class='sasa_category_item'>
+								
+									<div class='sasa_category_sidebox'>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>洁面/磨砂</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>泡沫洁面乳</a>
+												<a href='#'>洁面摩丝</a>
+												<a href='#'>洁面啫喱</a>
+												<a href='#'>洁面奶</a>
+												<a href='#'>洁面皂</a>
+												<a href='#'>洁面粉</a>
+												<a href='#'>磨砂膏</a>
+												<a href='#'>磨砂啫喱</a>
+												<a href='#'>泡沫洁面乳</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+									</div>
+										<div class='sasa_category_item_inner'>
+										<i class='iconfont more_category_l'>&#xe639;</i>
+										<span class='sasa_category_item_span'><a href='#'>彩妆</a></span>
+										<i class='iconfont more_category_r'>&#xe775;</i>
+									</div>
+								</li>
+								<li class='sasa_category_item'>
+								
+									<div class='sasa_category_sidebox'>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>洁面/磨砂</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>泡沫洁面乳</a>
+												<a href='#'>洁面摩丝</a>
+												<a href='#'>洁面啫喱</a>
+												<a href='#'>洁面奶</a>
+												<a href='#'>洁面皂</a>
+												<a href='#'>洁面粉</a>
+												<a href='#'>磨砂膏</a>
+												<a href='#'>磨砂啫喱</a>
+												<a href='#'>泡沫洁面乳</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+									</div>
+										<div class='sasa_category_item_inner'>
+										<i class='iconfont more_category_l'>&#xe735;</i>
+										<span class='sasa_category_item_span'><a href='#'>香水</a></span>
+										<i class='iconfont more_category_r'>&#xe775;</i>
+									</div>
+								</li>
+								<li class='sasa_category_item'>
+								
+									<div class='sasa_category_sidebox'>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>洁面/磨砂</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>泡沫洁面乳</a>
+												<a href='#'>洁面摩丝</a>
+												<a href='#'>洁面啫喱</a>
+												<a href='#'>洁面奶</a>
+												<a href='#'>洁面皂</a>
+												<a href='#'>洁面粉</a>
+												<a href='#'>磨砂膏</a>
+												<a href='#'>磨砂啫喱</a>
+												<a href='#'>泡沫洁面乳</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+									</div>
+										<div class='sasa_category_item_inner'>
+										<i class='iconfont more_category_l'>&#xe761;</i>
+										<span class='sasa_category_item_span'><a href='#'>健康美肌</a></span>
+										<i class='iconfont more_category_r'>&#xe775;</i>
+									</div>
+								</li>
+								<li class='sasa_category_item'>
+									
+									<div class='sasa_category_sidebox'>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>洁面/磨砂</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>泡沫洁面乳</a>
+												<a href='#'>洁面摩丝</a>
+												<a href='#'>洁面啫喱</a>
+												<a href='#'>洁面奶</a>
+												<a href='#'>洁面皂</a>
+												<a href='#'>洁面粉</a>
+												<a href='#'>磨砂膏</a>
+												<a href='#'>磨砂啫喱</a>
+												<a href='#'>泡沫洁面乳</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+									</div>
+									<div class='sasa_category_item_inner'>
+										<i class='iconfont more_category_l'>&#xe7b6;</i>
+										<span class='sasa_category_item_span'><a href='#'>纤体美胸</a></span>
+										<i class='iconfont more_category_r'>&#xe775;</i>
+									</div>
+								</li>
+								<li class='sasa_category_item'>
+								
+									<div class='sasa_category_sidebox'>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>洁面/磨砂</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>泡沫洁面乳</a>
+												<a href='#'>洁面摩丝</a>
+												<a href='#'>洁面啫喱</a>
+												<a href='#'>洁面奶</a>
+												<a href='#'>洁面皂</a>
+												<a href='#'>洁面粉</a>
+												<a href='#'>磨砂膏</a>
+												<a href='#'>磨砂啫喱</a>
+												<a href='#'>泡沫洁面乳</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+									</div>
+										<div class='sasa_category_item_inner'>
+										<i class='iconfont more_category_l'>&#xe657;</i>
+										<span class='sasa_category_item_span'><a href='#'>个人护理</a></span>
+										<i class='iconfont more_category_r'>&#xe775;</i>
+									</div>
+								</li>
+								<li class='sasa_category_item'>
+									
+									<div class='sasa_category_sidebox'>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>洁面/磨砂</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>泡沫洁面乳</a>
+												<a href='#'>洁面摩丝</a>
+												<a href='#'>洁面啫喱</a>
+												<a href='#'>洁面奶</a>
+												<a href='#'>洁面皂</a>
+												<a href='#'>洁面粉</a>
+												<a href='#'>磨砂膏</a>
+												<a href='#'>磨砂啫喱</a>
+												<a href='#'>泡沫洁面乳</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+									</div>
+									<div class='sasa_category_item_inner'>
+										<i class='iconfont more_category_l'>&#xe7b5;</i>
+										<span class='sasa_category_item_span'><a href='#'>男士专区</a></span>
+										<i class='iconfont more_category_r'>&#xe775;</i>
+									</div>
+								</li>
+								<li class='sasa_category_item'>
+								
+									<div class='sasa_category_sidebox'>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>洁面/磨砂</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>泡沫洁面乳</a>
+												<a href='#'>洁面摩丝</a>
+												<a href='#'>洁面啫喱</a>
+												<a href='#'>洁面奶</a>
+												<a href='#'>洁面皂</a>
+												<a href='#'>洁面粉</a>
+												<a href='#'>磨砂膏</a>
+												<a href='#'>磨砂啫喱</a>
+												<a href='#'>泡沫洁面乳</a>
+											</div>
+										</div>
+										<div class='sasa_category_column'>
+											<h3 class='sasa_category_column_title'>
+												<a href='#'>眼部/唇部/颈部护理</a>
+											</h3>
+											<div class='sasa_cateory_item_list'>
+												<a href='#'>眼霜</a>
+												<a href='#'>眼胶</a>
+												<a href='#'>眼部精化/疗程</a>
+												<a href='#'>眼膜</a>
+												<a href='#'></a>
+												<a href='#'>睡眠免洗式眼膜</a>
+												<a href='#'>润唇膏</a>
+												<a href='#'>唇部精化</a>
+												<a href='#'>唇膜</a>
+												<a href='#'>唇部磨砂</a>
+												<a href='#'>颈霜</a>
+												<a href='#'>颈精华</a>
+												<a href='#'>颈膜</a>
+											</div>
+										</div>
+									</div>
+									<div class='sasa_category_item_inner'>
+										<i class='iconfont more_category_l'>&#xe608;</i>
+										<span class='sasa_category_item_span'><a href='#'>孕婴护理</a></span>
+										<i class='iconfont more_category_r'>&#xe775;</i>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<i class='iconfont'>&#xe790;</i>
+						<span class='sub_items_detil'>全部分类</span>
+					</div> 
+					<div class='sub_nav'>
+						<ul class='clearfix' id='sub_nav_list'>
+							<li class='sub_nav_a'>
+								<a href='#'><img src='images/icon-store_919.gif' /></a>
+							</li>
+									
+							<li class='sub_nav_b'>/</li>
+							<li class='sub_nav_a'><a href='#'>面部护肤</a></li>
+							<li class='sub_nav_b'>/</li>
+							<li class='sub_nav_a'><a href='#'>彩妆</a></li>
+							<li class='sub_nav_b'>/</li>
+							<li class='sub_nav_a'>
+								<a href='#'>限时特卖 <i class='sub_nav_hoticon'></i></a>
+							</li>
+							<li class='sub_nav_b'>/</li>
+							<li class='sub_nav_a'><a href='#'>贵宾专享</a></li>
+							<li class='sub_nav_b'>/</li>
+							<li class='sub_nav_a'>
+								<a href='#'>闪电保税专区<i class='sub_nav_hoticon'></i></a>
+							</li>
+							<li class='sub_nav_b'>/</li>
+							<li class='sub_nav_a'><a href='#'>清仓特卖</a></li>
+							<li class='sub_nav_b'>/</li>
+							<li class='sub_nav_a sub_nav_items'>
+								<a href='#'>所有品牌<i class='iconfont'>&#xe771;</i></a>
+								<div class="nav-itembox" id='nav-itembox'>
+									<span class='navtip-arr'><i class='iconfont'>&#xe76d;</i></span>
+									<ul>
+										<li class='navtip-text'>
+											<a href='#'>热门品牌</a>
+										</li>
+										<li>
+											<a href='#'>  森田药妆  SAM TIN   </a>                
+										</li>
+										<li>
+											<a href='#'>  希思黎  Sisley    </a>                
+										</li>
+										<li>
+											<a href='#'>  雅诗兰黛    Estee Lauder   </a>                
+										</li>
+										<li>
+											<a href='#'>   兰蔻  Lancome   </a>                
+										</li>
+										<li>
+											<a href='#'>  SK-II      </a>                
+										</li>
+										<li>
+											<a href='#'>   资生堂     Shiseido     </a>                
+										</li>
+										<li>
+											<a href='#'>    高丝   Kose   </a>                
+										</li>
+										<li>
+											<a href='#'>      雅漾     Avene     </a>                
+										</li>
+									</ul>
+									<div class='nav-itembox_more'>
+										<a href='#'>查看全部品牌</a>
+									</div>
+								</div>
+							</li>
+		
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--右侧边栏-->
+		<div class='sidebar-box' id='sidebar-box'>
+			<div class='mui-mbar-tab'>
+				<a href='#'><i class='iconfont'>&#xe788;</i></a>
+				<div class='mui-mbar-tab-tip'>我的账户
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab sidecart'>
+				<a href='#'>
+					<i class='iconfont' id='end_cart'>&#xe73d;</i>购物车
+					<span class='js_cartnum'>0</span>
+				</a>
+				
+			</div>
+			<div class='mui-mbar-tab'>
+				<a href='#'><i class='iconfont'>&#xe761;</i></a>
+				<div class='mui-mbar-tab-tip'>我的收藏
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab' style='margin-bottom: 100px;'>
+				<a href='#'><i class='iconfont'>&#xe767;</i></a>
+				<div class='mui-mbar-tab-tip'>浏览记录
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab'>
+				<a href='#'><i class='iconfont'>&#xe741;</i></a>
+				<div class='mui-mbar-tab-tip'>线上客服
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab mysidecode' style='margin-bottom: 10px;'>
+				<a href='#'><i class='iconfont'>&#xe7ad;</i></a>
+				<div class='mui-mbar-tab-tip-icon' id='mysidecode'>
+					<img src='images/sasa_wechat.jpg' />
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab sideup'>
+				<a href='#'><i class='iconfont'>&#xe76d;</i>TOP</a>
+			</div>
+		</div>
+		<!--加入购物车后弹出框-->
+		<div id='msg'>
+			<div class='msg_title'>
+				提醒
+				<span class='close'>X<span>
+			</div>
+			<p class='success'>加入购物车成功</p>
+			<div class='choice'>
+				<a href='javascript:;' id='continue'>继续购物</a>
+				<a href='basket.html' target="_blank">进入购物车</a>
+			</div>
+		</div>		
+			
+		<!--页面主体-->
+		<div id='main_wrap'>
+			<div class='bread-crumbs'>
+				<a href='index.html' target="_blank">首页</a> /
+				<a href='#'>搜索"鳄梨油润唇膏"</a>
+			</div>
+			<div class='filter-container'>
+				<ul class='gallery_filter'>
+					<li class='filter-selected clearfix'>
+						<span>已选</span>
+						<a href='#'>重置筛选项</a>
+					</li>
+					<li class='filter-entries clearfix'>
+						<div class='filter-entries-label'>分类</div>
+						<div class='filter-entries-values'>
+							<span class="filter-entries-thin"><a href='#'>泡沫洁面乳</a></span>
+							<span class="filter-entries-thin"><a href='#'>卸妆乳</a></span>
+							<span class="filter-entries-thin"><a href='#'>柔肤水</a></span>
+							<span class="filter-entries-thin"><a href='#'>爽肤水</a></span>
+							<span class="filter-entries-thin"><a href='#'>精华液</a></span>
+							<span class="filter-entries-thin"><a href='#'>精华素/ 疗程</a></span>
+							<span class="filter-entries-thin"><a href='#'>日霜</a></span>
+							<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+							<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+							<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+							<!--隐藏部分-->
+							<div class='filter-item-hide'>
+								<span class="filter-entries-thin"><a href='#'>精华素/ 疗程</a></span>
+								<span class="filter-entries-thin"><a href='#'>日霜</a></span>
+								<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+								<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+								<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+								<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+								<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+								<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+							</div>
+						</div>
+						<div class='filter-entries-more'>
+							<a href='javascript:;' class='more'>
+								<span>更多</span>
+								<i class='iconfont'>&#xe771;</i>
+							</a>
+							<!--/收起/-->
+							<a href='javascript:;' class='pack more'>
+								<span>收起</span>
+								<i class='iconfont'>&#xe76d;</i>
+							</a>
+						</div>
+					</li>
+					<li class='filter-entries clearfix'>
+						<div class='filter-entries-label'>品牌</div>
+						<div class='filter-entries-values'>
+							<span class="filter-entries-thin"><a href='#'>泡沫洁面乳</a></span>
+							<span class="filter-entries-thin"><a href='#'>卸妆乳</a></span>
+							<span class="filter-entries-thin"><a href='#'>柔肤水</a></span>
+							<span class="filter-entries-thin"><a href='#'>爽肤水</a></span>
+							<span class="filter-entries-thin"><a href='#'>精华液</a></span>
+							<span class="filter-entries-thin"><a href='#'>精华素/ 疗程</a></span>
+							<span class="filter-entries-thin"><a href='#'>日霜</a></span>
+							<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+							<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+							<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+							<!--隐藏部分-->
+							<div class='filter-item-hide'>
+								<span class="filter-entries-thin"><a href='#'>精华素/ 疗程</a></span>
+								<span class="filter-entries-thin"><a href='#'>日霜</a></span>
+								<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+								<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+								<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+								<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+								<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+								<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+							</div>
+						</div>
+						<div class='filter-entries-more'>
+							
+							<a href='javascript:;' class='more'>
+								<span>更多</span>
+								<i class='iconfont'>&#xe771;</i>
+							</a>
+							<!--/收起/-->
+							<a href='javascript:;' class='pack more'>
+								<span>收起</span>
+								<i class='iconfont'>&#xe76d;</i>
+							</a>
+							<span class='filter-entries-multi'>
+								<a href='#'>多选+</a>
+							</span>
+						</div>
+					</li>
+					<li class='filter-entries clearfix'>
+						<div class='filter-entries-label'>功效</div>
+						<div class='filter-entries-values'>
+							<span class="filter-entries-thin"><a href='#'>泡沫洁面乳</a></span>
+							<span class="filter-entries-thin"><a href='#'>卸妆乳</a></span>
+							<span class="filter-entries-thin"><a href='#'>柔肤水</a></span>
+							<span class="filter-entries-thin"><a href='#'>爽肤水</a></span>
+							<span class="filter-entries-thin"><a href='#'>精华液</a></span>
+							<span class="filter-entries-thin"><a href='#'>精华素/ 疗程</a></span>
+							<span class="filter-entries-thin"><a href='#'>日霜</a></span>
+							<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+							<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+							<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+							<!--隐藏部分-->
+							<div class='filter-item-hide'>
+								<span class="filter-entries-thin"><a href='#'>精华素/ 疗程</a></span>
+								<span class="filter-entries-thin"><a href='#'>日霜</a></span>
+								<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+								<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+								<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+								<span class="filter-entries-thin"><a href='#'>乳液</a></span>
+								<span class="filter-entries-thin"><a href='#'>面膜贴</a></span>
+								<span class="filter-entries-thin"><a href='#'>水洗式面膜</a></span>
+							</div>
+						</div>
+						<div class='filter-entries-more'>
+							
+							<a href='javascript:;' class='more'>
+								<span>更多</span>
+								<i class='iconfont'>&#xe771;</i>
+							</a>
+							<!--/收起/-->
+							<a href='javascript:;' class='pack more'>
+								<span>收起</span>
+								<i class='iconfont'>&#xe76d;</i>
+							</a>
+							<span class='filter-entries-multi'>
+								<a href='#'>多选+</a>
+							</span>
+						</div>
+					</li>
+						
+				</ul>
+				<div class='filter-more'>
+					<a href='#'>
+						显示更多筛选项
+						<i class='iconfont'>&#xe771;</i>
+					</a>
+				</div>
+			</div>
+			<div class='gallery_sortbar clearfix'>
+				<p class='gallery_sortbar_fl clearfix'>
+					<span class='gallery-sorttext'>排序</span>
+					<a href='javascript:;' class='action-sort active'>销售<span></span></a>
+					<a href='javascript:;'>人气</a>
+					<a href='javascript:;'>评分</a>
+					<a href='javascript:;'>上架</a>
+					<a href='javascript:;'>时间</a>
+					<a href='javascript:;'>价格</a>
+					
+				</p>
+				<p class='gallery_sortbar_fr'>
+					<a href='javascript:;' class='prev'> < </a>
+						&nbsp;1/35&nbsp;
+					<a href='javascript:;' class='next'> > </a>
+				</p>
+			</div>
+		
+			<!--商品区--> <!--秒杀倒计时   -->
+              
+			<div class='gallery_show'>
+				<ul class='arrivalslist clearfix'>
+					<li>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list1_1_1.jpg' /></li>
+									<li><img src='images/list1_1_2.jpg' /></li>
+									<li><img src='images/list1_1_3.jpg' /></li>
+								</ul>
+							</div>
+							
+							<div class='arrivals-pic'>
+		<!--图片-->				<span><img src='images/list1_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥52.0</span><!--现价-->
+								<span class='dis'>￥77.0</span>
+								<span class='count'>6.8折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'>[保税仓直送]</b><a href='#'>CYBER COLORS</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>鳄梨油润唇膏</a></p>
+		<!--重量-->				<p class='quality'>3.6克  </p>
+								<p class='salenum'>已售111件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list2_1_1.jpg' /></li>
+									<li><img src='images/list2_1_2.jpg' /></li>
+									<li><img src='images/list2_1_3.jpg' /></li>
+								</ul>
+							</div>
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list2_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥103.0</span><!--现价-->
+								<span class='dis'>￥110.0</span>
+								<span class='count'>9.4折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'>[保税仓直送]</b><a href='#'>伊丽莎白 · 雅顿</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>8小时系列经典润泽唇膏SPF15</a></p>
+		<!--重量-->				<p class='quality'>3.7克  </p>
+								<p class='salenum'>已售11件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list3_1_1.jpg' /></li>
+									<li><img src='images/list3_1_2.jpg' /></li>
+									<li><img src='images/list3_1_3.jpg' /></li>
+								</ul>
+							</div>
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list3_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥79.0</span><!--现价-->
+								<span class='dis'>￥88.0</span>
+								<span class='count'>9折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>科颜氏</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>护唇膏一号 (薄荷香)</a></p>
+		<!--重量-->				<p class='quality'>  15毫升 </p>
+								<p class='salenum'>已售99件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li class='left'>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list4_1_1.jpg' /></li>
+									<li><img src='images/list4_1_2.jpg' /></li>
+									<li><img src='images/list4_1_3.jpg' /></li>
+								</ul>
+							</div>
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list4_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥75.0</span><!--现价-->
+								<span class='dis'>￥88.0</span>
+								<span class='count'>8.5折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'>[保税仓直送]</b><a href='#'>科颜氏</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>护唇膏一号 (原味)</a></p>
+		<!--重量-->				<p class='quality'>15毫升   </p>
+								<p class='salenum'>已售0件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list5_1_1.jpg' /></li>
+									<li><img src='images/list5_1_2.jpg' /></li>
+									<li><img src='images/list5_1_3.jpg' /></li>
+								</ul>
+							</div>
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list5_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥45.0</span><!--现价-->
+								<span class='dis'>￥100.0</span>
+								<span class='count'>4.5折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>谜尚</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>小黄人蜡笔气垫口红 #RD01 樱桃红</a></p>
+		<!--重量-->				<p class='quality'>2.5克  &nbsp; #RD01樱桃红 </p>
+								<p class='salenum'>已售10件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list6_1_1.jpg' /></li>
+									<li><img src='images/list6_1_2.jpg' /></li>
+									<li><img src='images/list6_1_3.jpg' /></li>
+								</ul>
+							</div>
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list6_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥269.0</span><!--现价-->
+								<span class='dis'>￥320.0</span>
+								<span class='count'>8.4折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>圣罗兰</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>纯口红 #49 Rose Tropical</a></p>
+		<!--重量-->				<p class='quality'>3.8克  &nbsp;#49 Rose Tropical</p>
+								<p class='salenum'>已售111件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list7_1_1.jpg' /></li>
+									<li><img src='images/list7_1_2.jpg' /></li>
+									<li><img src='images/list7_1_3.jpg' /></li>
+								</ul>
+							</div>
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list7_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥133.0</span><!--现价-->
+								<span class='dis'>￥180.0</span>
+								<span class='count'>7.4折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>嘉娜宝</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>唇膏   COFFRET D’OR晶漾诱色口红</a></p>
+		<!--重量-->				<p class='quality'>15毫克  #265 PINK </p>
+								<p class='salenum'>已售1件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li class='left'>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list8_1_1.jpg' /></li>
+									<li><img src='images/list8_1_2.jpg' /></li>
+									<li><img src='images/list8_1_3.jpg' /></li>
+								</ul>
+							</div>
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list8_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥210.0</span><!--现价-->
+								<span class='dis'>￥320.0</span>
+								<span class='count'>6.6折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>娇兰</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>亲亲滋润护唇膏 #R371 Morning Rose</a></p>
+		<!--重量-->				<p class='quality'>2.8克  #R371 Morning Rose  </p>
+								<p class='salenum'>已售3件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li class='normal'>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<div class='formalpic'>
+								<!--<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list9_1_1.jpg' /></li>
+									<li><img src='images/list9_1_2.jpg' /></li>
+									<li><img src='images/list9_1_3.jpg' /></li>
+								</ul>-->
+							</div>
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list9_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥125.0</span><!--现价-->
+								<span class='dis'>￥158.0</span>
+								<span class='count'>7.9折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'>[保税仓直送]</b><a href='#'>LABIOTTE</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>CHATEAU LABIOTTE WINE   红酒口红 PK01</a></p>
+		<!--重量-->				<p class='quality'>3.7 克  PK01 </p>
+								<p class='salenum'>已售21件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+					<li class='normal'>
+						<div class='formall'>
+							<!--鼠标移入显示小图-->
+							<!--<div class='formalpic'>
+								<ul class='formalpic_list'>
+									<li class='br_active'><img src='images/list10_1_1.jpg' /></li>
+									<li><img src='images/list10_1_2.jpg' /></li>
+									<li><img src='images/list10_1_3.jpg' /></li>
+								</ul>
+							</div>-->
+							<div class='arrivals-pic'>
+		<!--图片	-->				<span><img src='images/list10_2_1.jpg' /></span>
+							</div>
+							<div class='sale-price'>
+								<span class='price'>￥199.0</span><!--现价-->
+								<span class='dis'>￥220.0</span>
+								<span class='count'>9折</span>
+							</div>
+							<div class='arrivals-info'>
+		<!--标题-->				<p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>fresh</a></p>
+		<!--说明-->				<p class='explain'><a href='#'>澄糖滋润护唇膏 花漾裸粉</a></p>
+		<!--重量-->				<p class='quality'>4.3克  花漾裸粉 </p>
+								<p class='salenum'>已售111件</p>
+							</div>
+							<!--显示购物车-->
+							<div class='cart_btn'>加入购物车</div>
+						</div>
+					</li>
+				
+				</ul>
+				
+			</div>
+		</div>	
+		<!--尾部帮助-->
+		<div id='footer_helper'>
+			<div class='sasa_promise_wrapper'>
+				<div class='sasa_promise clearfix'>
+					<dl class='sasa_promise_items clearfix'>
+						<dt class='sasa_promise_con1'></dt>
+						<dd class='sasa_promise_content1'>
+							<h3>满¥168免邮</h3>
+							<p>适用于保税仓商品</p>
+						</dd>
+					</dl>
+					<dl class='sasa_promise_items clearfix'>
+						<dt class='sasa_promise_con2'></dt>
+						<dd class='sasa_promise_content2'>
+							<h3>正品保证</h3>
+							<p>专注美妆护肤39年</p>
+						</dd>
+					</dl>
+					<dl class='sasa_promise_items clearfix'>
+						<dt class='sasa_promise_con3'></dt>
+						<dd class='sasa_promise_content3'>
+							<h3>香港直邮</h3>
+							<p>香港直发 美丽到家</p>
+						</dd>
+					</dl>
+					<dl class='sasa_promise_items clearfix'>
+						<dt class='sasa_promise_con4'></dt>
+						<dd class='sasa_promise_content4'>
+							<h3>30天退换保证</h3>
+							<p>为您提供售后无忧保障</p>
+						</dd>
+					</dl>
+					<dl class='sasa_promise_items sasa_promise_items_last clearfix'>
+						<dt class='sasa_promise_con5'></dt>
+						<dd class='sasa_promise_content5'>
+							<h3>香港上市</h3>
+							<p>股票代码: HK00178</p>
+						</dd>
+					</dl>
+				</div>
+				<div class='sasa_promise_server'>
+					<div class='helper-item-wrapper-rs clearfix'>
+						<ul class='helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>新手上路</a></h3>
+							</li>
+							<li><a href='#'>购物流程</a></li>
+							<li><a href='#'>优惠券说明</a></li>
+							<li><a href='#'>常见问题</a></li>
+							<li><a href='#'>联络我们</a></li>
+							<li><a href='#'>购物流程</a></li>
+							<li><a href='#'>购物流程</a></li>
+							<li><a href='#'>常见问题</a></li>
+						</ul>
+						<ul class='helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>付款方式</a></h3>
+							</li>
+							<li><a href='#'>在线支付</a></li>
+							<li><a href='#'>积分支付</a></li>
+						</ul>
+						<ul class='helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>配送方式</a></h3>
+							</li>
+							<li><a href='#'>配送说明</a></li>
+							<li><a href='#'>跟踪订单</a></li>
+						</ul>
+						<ul class='helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>售后服务</a></h3>
+							</li>
+							<li><a href='#'>正平保证</a></li>
+							<li><a href='#'>价格承若</a></li>
+							<li><a href='#'>30日退换保证</a></li>
+							<li><a href='#'>退款程序</a></li>
+							<li><a href='#'>更改订单</a></li>
+						</ul>
+						<ul class='helper-item-rs helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>莎莎会员</a></h3>
+							</li>
+							<li><a href='#'>积分奖赏</a></li>
+							<li><a href='#'>VIP会员计划</a></li>
+						</ul>
+					</div>
+					<div calss='footer_right clearfix'>
+						<div class='btom-code'>
+							<div class='btom-code_img'>
+								<img src='images/sasa_wechat.jpg' alt='莎莎官方微信'/>
+							</div>
+							<p>莎莎官方微信</p>
+							<p>ID:hksasadotcom</p>
+						</div>
+						<div class='btom-code btom-code2'>
+							<div class='btom-code_img'>
+								<img src='images/sasa_weion.jpg' alt='莎莎官方微博'/>
+							</div>
+							<p>莎莎官方微博</p>
+							<p>@莎莎网</p>
+						</div>
+					</div>
+				</div>
+				<div class='sasa_promise_img'>
+					<a href='#'>
+						<img src='images/all_icon.jpg' />
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--底部-->
+		<div id='footer_box'>
+			<div class='footer'>
+				<p class='footer_linkboard'>
+					<a href='#'>关于莎莎</a>
+					<span>|</span>
+					<a href='#'>使用条款</a>
+					<span>|</span>
+					<a href='#'>隐私策略</a>
+					<span>|</span>
+					<a href='#'>批发服务</a>
+					<span>|</span>
+					<a href='#'>招商合作</a>
+					<span>|</span>
+					<a href='#'>帮助中心</a>
+					<span>|</span>
+					<a href='#'>人才招聘</a>
+					<span>|</span>
+					<a href='#'>联络我们</a>
+					<span>|</span>
+					<a href='#'>其他送货地区</a>
+				</p>
+				<p class='footer_Copyright'>Copyright 2000-2017 Sa Sa dot Com Limited 版权所有莎莎国际控股有限公司成员</p>
+			</div>
+		</div>
+	                 
+	</body>
+</html>

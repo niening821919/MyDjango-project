@@ -1,0 +1,343 @@
+
+/*logo*/
+#logo_wrap{
+	width: 100%;
+	height: 95px;
+	background: #fff;
+}
+#logo_wrap .logo{
+	width: 1200px;
+	margin: 0 auto;
+}
+.logo .sotelogo{
+	width: 170px;
+	height: 42px;
+	float: left;
+	margin-top: 21px;
+	background: url(../images/logo.png) no-repeat center;
+	margin-left: 50px;
+}
+.sotelogo a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-indent: -999px;
+}
+.topcart-step{
+	width: 472px;
+	height: 62px;
+	margin: 20px 0 0 100px;
+	float: left;
+	background: url(../images/cartstep.png) no-repeat 0px 0px;
+}
+
+.topcartico{
+	float: right;
+	margin: 35px 100px 0 0;
+}
+.topcartico img{
+	margin-right: 10px;
+}
+/*/没商品显示/*/
+.cart-empty{
+	width: 985px;
+	margin: 80px auto;
+	background: #fff;
+	overflow:hidden;
+	/*display: none;*/
+}
+.cart-emptytext{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 80px;
+	font-family: Microsoft YaHei,STHeiti,sans-serif;
+	
+}
+.cart-emptytext2{
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 40px;
+	padding: 20px 0;
+	font-family: Microsoft YaHei,STHeiti,sans-serif;
+	
+}
+.cart-emptyserver{
+	width: 436px;
+	margin: 0 auto;
+}
+.server_text{
+	width: 330px;
+	height: 24px;
+	padding:3px  5px;
+	float: left;
+	border: 3px solid #ec3e7d;
+}
+.server_btn{
+	float: left;
+	width: 90px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 700;
+	color: #fff;
+	background: #ec3e7d;
+	border: none;
+	outline: none;
+}
+.cart-emptyserver p{
+	overflow: hidden;
+	padding-top: 10px;
+	clear: both;
+}
+.cart-emptyserver p a{
+	color: #a2a3a5;
+	display: inline-block;
+	height: 15px;
+	line-height: 15px;
+	padding:0 10px;
+	border-left: 1px solid #a2a3a5;
+}
+.cart-emptyserver p a:first-child{
+	border: none;
+	padding-left: 0;
+}
+.cart-emptyserver p a:hover{
+	color: #ec3e7d;
+}
+
+.goback{
+	display: block;
+	color: #666;
+	border: 1px solid #c6c6c6;
+	width: 100px;
+	padding: 5px 10px;
+	margin: 30px auto 80px;
+	text-align: center;
+	
+}
+.index_mymessage{
+	position: relative;
+}
+.index_mymessage sup{
+	position: absolute;
+	display: block;
+	background: #dd4337;
+	border-radius: 50%;
+	left: 15px;
+	top: 0;
+	color: #fff;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+}
+/*有商品显示*/
+#main_shop{
+	/*display: none;*/
+	width: 985px;
+	margin: 30px auto;
+	background: #fff;
+	color: #666666;
+}
+#main_shop .carttitle{
+	width: 100%;
+	height: 38px;
+	background: #f2f2f2 url(../images/home-bt.png) no-repeat 0px -844px;
+	
+	
+}
+.ui-cart-tips{
+	font-size: 12px;
+	color:#666666;
+	text-align: right;
+	padding-bottom: 10px;
+	background: #f2f2f2;
+	padding-top: 30px;
+}
+.ui-cart-tips font{
+	color: rgb(204,0,0);
+}
+
+.cart_main{
+	width: 100%;
+}
+.cart_list li{
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+}
+.cart_title{
+	height: 40px;
+	line-height: 40px;
+	border-left:  5px solid #ed407e;
+}
+.cart_title div{
+	float: left;
+}
+.title_allChecked{
+	
+	width: 201px;
+	padding-left: 10px;
+}
+.title_allChecked input{
+	margin-right: 10px;
+}
+.title_user{
+	width: 378px;
+	overflow: hidden;
+	text-align: left;
+}
+.title_price,.tltie_num,.title_totals{
+	width: 98px;	
+	text-align: center;
+}
+
+.cart_detail{
+	
+}
+.cart_detail div{
+	float: left;
+	font-size: 14px;
+}
+.cart_detail .J-pic{
+	width: 211px;
+	overflow: hidden;
+}
+.J-pic a,.J-pic input{
+	float: left;
+}
+.J-pic input{
+	
+	margin: 24px 0 0 15px;
+	
+}
+.J-pic a{
+	display: block;
+	width: 100px;
+	height: 100px;	
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.J-pic a img{
+	width: 100%;
+	height: 100%;
+}
+.J-state{
+	margin-top: 25px;
+	width: 378px;
+	overflow: hidden;
+	
+}
+.ui-carttable-title a{
+	color: #666666;
+	font-size: 14px;
+}
+
+.J-state .ui-carttable-spec{
+	color: #b2b2b2;
+	margin-top: 10px;
+}
+.J-price,.J-quantity,.J-subtotal,.J-btnDelete{
+	margin-top: 25px;
+	width: 98px;	
+	text-align: center;
+	overflow: hidden;
+	
+}
+.J-quantity .shop_num{
+	
+	max-width: 30px;
+	height: 21px;
+	line-height: 21px;
+	text-align: center;
+	border: 1px solid rgb(242, 242, 242);
+	float: left;
+	font-size: 14px;
+	
+}
+.J-quantity .shop_num:hover{
+	box-shadow: 0px 0px 5px  rgb(251, 180, 176);
+}
+.J-quantity span:first-child{
+	margin-left: 10px;
+}
+.J-quantity span{
+	width: 23px;
+	height: 23px;
+	display: inline-block;
+	background: #eee;
+	text-align: center;
+	line-height: 20px;
+	float: left;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.J-quantity span:hover{
+	background: rgb(221,221,221);
+	color: white;
+}
+
+.J-btnDelete a{
+	font-size: 14px;
+	color: #b2b2b2;
+}
+.J-subtotal{
+	color: #ec3e7d;
+}
+/*结算*/
+.ui-cartfoot-check{
+	height: 40px;
+	line-height: 40px;
+	
+	
+	
+}
+.bg_f2{
+	height: 30px;
+	background: #f2f2f2;
+}
+.ui-cartfoot-link{
+	float: left;
+}
+.ui-cartfoot-link a{
+	color: #565d67;
+	margin-left: 20px;
+}
+.ui-cartfoot_fr{
+	float: right;
+}
+.ui-cartfoot_fr div{
+	display: inline-block;
+}
+.btn_account{
+	padding: 0 50px;
+	color: #fff;
+	font-size: 16px;
+	height: 40px;
+	background-color: #ec3e7d;
+	border: none;
+	font-weight: 600;
+	float:right;
+	cursor: pointer;
+	
+}
+.account_totals{
+	margin-right: 35px;
+	font-size: 14px;
+}
+.promotion-subtotal{
+	font-size: 18px;
+	color: #db3f7e;
+	font-weight: 700;
+}
+.shop_nums{
+	margin-right: 35px;
+	font-size: 14px;
+}
+.items-quantity{
+	color: #db3f7e;
+	padding: 0 2px;
+}

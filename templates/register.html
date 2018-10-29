@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>免费注册</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<script type="text/javascript" src='js/jquery-1.12.3.js'></script>
+		<script type="text/javascript" src='js/jquery.cookie.js'></script>
+		<script type="text/javascript" src='js/head.js'></script>
+		<script type="text/javascript" src='js/gVerify.js'></script>
+		<script type="text/javascript" src='js/register.js'></script>
+			
+		
+	</head>
+	<body>
+		<!--页面头部导航-->
+		<div id='top_wrap'>
+			<div class='top_header'>
+				<div class='top_header_left'>
+					<span>欢迎光临莎莎网！</span>
+					<a href='#' class='top_header_login'>登录</a>
+					<span>或</span>
+					<a href='#'>免费注册</a>
+				</div>
+				<div class='top_header_right'>
+					<ul class='header_right_list clearfix'>
+						<li id='attention'>
+							<div class='noline'>
+								<img src='images/sasa_wechat.jpg' />
+							</div>
+							<span>关注我们</span>
+							<i class='top_wechat'></i>
+							<i class='top_microblog'></i>	
+							
+						</li>
+						<li>Global site</li>
+						<li>积分中心</li>
+						<li>我的站内信</li>
+						<li>
+							<i class='iconfont'>&#xe761;</i>
+							<span>我的收藏</span>	
+						</li>
+						<li id='cartLi'>
+							<div id='myCart'>
+								<div class='empty'>
+									购物车中还没有商品，<br />快去挑选心爱的商品吧
+								</div>
+							</div>
+							<i class='iconfont'>&#xe73d;</i>
+							<span>我的购物车</span>	
+						</li>
+						<li id='account_li'>
+							<div class='account'>
+								<ul>
+									<li>
+										<a href='#'>我的订单</a>
+									</li>
+									<li>
+										<a href='#'>我的积分</a>
+									</li>
+									<li>
+										<a href='#'>我的优惠券</a>
+									</li>
+									<li>
+										<a href='#'>我的收藏</a>
+									</li>
+									<li>
+										<a href='#'>我的评价</a>
+									</li>
+								</ul>
+							</div>
+							<i class='iconfont'>&#xe638;</i>
+							<span>我的账户</span>	
+							<i class='iconfont sw-resize'>&#xe772;</i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id='main_wrap'>
+			<!--logo-->
+			<div class='logo_wrap'>
+				<div class='logo'>
+					<h3><a href='#'>欢迎来到莎莎官网</a></h3>
+				</div>
+			</div>
+			<!--注册-->
+			<div class='register_wrap clearfix'>
+				<div class='bg_register'></div>
+				<div class='signup-article'>
+					<div class='sign-title-text'>
+						<h3>注册账号</h3>
+						<a href='login.html' target="_blank">立即登录</a>
+						<span>已有莎莎账号？</span>
+						
+					</div>
+					<div class='signupbox'>
+						<form>
+							<p class='form-act'>
+								<input type="text" placeholder="请输入邮箱/手机号，最少5个字符" />
+							</p>
+							<p class='reminder'></p>
+							<p class='form-act'>
+								<input type="password" placeholder="请输入密码6-16位字母和数字的组合" />
+							</p>
+							<p class='reminder'></p>
+							<p class='form-act'>
+								<input type="password" placeholder="再次填写密码" />
+							</p>
+							<p class='reminder'></p>
+							<p class='form-act action-verifycode'>
+								<input type="text" placeholder="填写验证码" />
+								<div id='code' style='position: absolute;'></div>
+								<a href='javascript:;' id='change'>看不清?换一张</a>
+							</p>
+							<p class='reminder'></p>
+							<label class='form-sub-label'>
+								<input type='checkbox' checked />同意
+								<a href='#'>莎莎网使用条款</a>和
+								<a href='#'>隐私保护政策</a>
+							</label>
+							<label class='form-sub-label'>
+								<input type='checkbox' checked />您同意接收莎莎发送的与产品或者服务有关的推广宣传资料
+							</label>
+							<p class='btn_submit'>
+								<button id='btn'>注册</button>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='login_success'>
+			注册成功即将为你跳转登录页面
+			<div class='loading'></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/basket.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/head.js"></script>
+		<script type="text/javascript" src="js/basket.js"></script>
+			
+	</head>
+	<body>
+		<!--页面头部导航-->
+		<div id='top_wrap'>
+			<div class='top_header'>
+				<div class='top_header_left'>
+					<span>你好！18***632885</span>
+					<!--<a href='#' class='top_header_login'>登录</a>-->
+					<span class='integral' style='color: #cb9966;margin-left: 5px;'><b style='font-weight: bold;'>0</b>积分</span>
+					<a href='#'>退出</a>
+				</div>
+				<div class='top_header_right'>
+					<ul class='header_right_list clearfix'>
+						<li id='attention'>
+							<div class='noline'>
+								<img src='images/sasa_wechat.jpg' />
+							</div>
+							<span>关注我们</span>
+							<i class='top_wechat'></i>
+							<i class='top_microblog'></i>	
+							
+						</li>
+						<li>Global site</li>
+						<li>积分中心</li>
+						<li class='index_mymessage'>我的站内信<sup>1</sup></li>
+						<li>
+							<i class='iconfont'>&#xe761;</i>
+							<span>我的收藏</span>	
+						</li>
+						<li id='cartLi'>
+							<div id='myCart'>
+								<div class='empty'>
+									购物车中还没有商品，<br />快去挑选心爱的商品吧
+								</div>
+							</div>
+							<!--有商品显示-->
+							<div class='miniCarDetail'>
+								<ul class='miniCarDetail_list'>
+									<!--<li>
+										<dl class='miniCarDetail_dl'>
+											<dt><a href='javascript:;'><img src='images/list1_1_1.jpg' /></a></dt>
+											<dd>
+												<p class='h_title'>科颜氏护唇膏一号 (薄荷香)科颜氏护唇膏一号 (薄荷香)</p>
+												<p class='price_p'>
+													<span class='x_price'>￥111.0</span>
+													<span class='x_num'>x1</span>
+													<span class='deleteicon'><i class='iconfont'>&#xe63f;</i></span>
+												</p>
+											</dd>
+										</dl>
+									</li>-->
+								</ul>
+								<div class='go_cart'><a href='basket.html'>进入购物车</a></div>
+							</div>
+							<i class='iconfont'>&#xe73d;</i>
+							<span>我的购物车</span>	
+						</li>
+						<li id='account_li'>
+							<div class='account'>
+								<ul>
+									<li>
+										<a href='#'>我的订单</a>
+									</li>
+									<li>
+										<a href='#'>我的积分</a>
+									</li>
+									<li>
+										<a href='#'>我的优惠券</a>
+									</li>
+									<li>
+										<a href='#'>我的收藏</a>
+									</li>
+									<li>
+										<a href='#'>我的评价</a>
+									</li>
+								</ul>
+							</div>
+							<i class='iconfont'>&#xe638;</i>
+							<span>我的账户</span>	
+							<i class='iconfont sw-resize'>&#xe772;</i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--logo-->
+		<div id="logo_wrap">
+			<div class='logo clearfix'>
+				<div class='sotelogo'>
+					<a href='#' alt='欢迎来到莎莎官网'>欢迎来到莎莎官网</a>
+				</div>
+				<div class='topcart-step'></div>
+				<div class='topcartico'>
+					<img src='images/ha.png' />
+					<img src='images/hb.png' />
+					<img src='images/hc.png' />
+				</div>
+			</div>
+		</div>
+		<!--没商品时显示-->
+		<div class='cart-empty'>
+			<div class='cart-emptytext'>亲，您的购物车中没有商品。</div>
+			<div class='cart-emptytext2'>赶紧挑选心爱的商品吧！</div>
+			<div class='cart-emptyserver clearfix'>
+				<input type='text' class='server_text' placeholder='保湿'/>
+				<input type='button' value='搜索' class='server_btn'/>
+				<p>      
+					<a href='#'>兰蔻</a>
+					<a href='#'>滋润</a>
+					<a href='#'>小样</a>
+					<a href='#'>碧柔</a>
+					<a href='#'>肌肤之钥</a>
+					<a href='#'>面膜</a>
+					<a href='#'>迪奥</a>
+				</p>
+			</div>
+			<a href='list.html' class='goback' target="_blank">返回首页</a>
+		</div>
+		
+		<!--有商品显示-->
+		<div id='main_shop'>
+			<div class='carttitle'></div>
+			<div class='ui-cart-tips'>香港直送商品订单满
+				<font>¥530</font>包邮，订单满<font>¥265</font>减运费<font>¥45</font>；未满<font>¥265</font>
+				运费<font>¥90</font>
+			</div>
+			<!--商品开始-->
+			<div class='cart_main' id='cart_main'>
+				<ul class='cart_list' id='cart_list'>
+					<li class='cart_title'>
+						<div class='title_allChecked'>
+							<input type='checkbox'>全选
+						</div>
+						<div class='title_user'>商品名称</div>			
+						<div class='title_price'>单价</div>
+						<div class='tltie_num'>数量</div>
+						<div class='title_totals'>小计</div>
+					</li>
+					<!--<li class='cart_detail'>
+						<div class='J-pic'>
+							<input type='checkbox' />
+							<a href='#'><img src='images/cyber1_1.jpg' /></a>
+						</div>
+						<div class='J-state'>
+							<p class='ui-carttable-title'><a href='#'>CYBER COLORS 鳄梨油润唇膏</a></p>
+							<p class='ui-carttable-spec'>3.6克</p>
+						</div>			
+						<div class='J-price'>￥52.0</div>
+						<div class='J-quantity'>
+							<span class='btn-decrease'>-</span>
+							<input type='text' class='shop_num' value='3' />
+							<span class='btn-increase'>+</span>
+						</div>
+						<div class='J-subtotal'>￥104.0</div>
+						<div class='J-btnDelete'><a href='#'>删除</a></div>
+					</li>
+					<li class='cart_detail'>
+						<div class='J-pic'>
+							<input type='checkbox' />
+							<a href='#'><img src='images/cyber1_1.jpg' /></a>
+						</div>
+						<div class='J-state'>
+							<p class='ui-carttable-title'><a href='#'>CYBER COLORS 鳄梨油润唇膏</a></p>
+							<p class='ui-carttable-spec'>3.6克</p>
+						</div>			
+						<div class='J-price'>￥52.0</div>
+						<div class='J-quantity'>
+							<span class='btn-decrease'>-</span>
+							<input type='text' class='shop_num' value='3' />
+							<span class='btn-increase'>+</span>
+						</div>
+						<div class='J-subtotal'>￥104.0</div>
+						<div class='J-btnDelete'><a href='#'>删除</a></div>
+					</li>-->
+				</ul>
+			</div>
+			
+			<!--结算-->
+			<div class='bg_f2'></div>
+			<div class='ui-cartfoot-check clearfix'>
+				<div class='ui-cartfoot-link'><a href='list.html' target="_blank">继续购物</a><a href='#'>清空购物车</a></div>			
+				<div class='ui-cartfoot_fr'>
+					<div class='shop_nums'>共 <b class='red items-quantity'>10</b>件商品</div>
+					<div class='account_totals'> 商品应付金额<span class='promotion-subtotal'> ¥0.0 </sapn></div>
+					<button class='btn_account'>结账</button>
+				</div>
+				
+				
+				
+			</div>
+		
+		</div>
+		<!--右侧边栏-->
+		<div class='sidebar-box' id='sidebar-box'>
+			<div class='mui-mbar-tab'>
+				<a href='#'><i class='iconfont'>&#xe788;</i></a>
+				<div class='mui-mbar-tab-tip'>我的账户
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab sidecart'>
+				<a href='#'>
+					<i class='iconfont' id='end_cart'>&#xe73d;</i>购物车
+					<span class='js_cartnum'>0</span>
+				</a>
+				
+			</div>
+			<div class='mui-mbar-tab'>
+				<a href='#'><i class='iconfont'>&#xe761;</i></a>
+				<div class='mui-mbar-tab-tip'>我的收藏
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab' style='margin-bottom: 100px;'>
+				<a href='#'><i class='iconfont'>&#xe767;</i></a>
+				<div class='mui-mbar-tab-tip'>浏览记录
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab'>
+				<a href='#'><i class='iconfont'>&#xe741;</i></a>
+				<div class='mui-mbar-tab-tip'>线上客服
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab mysidecode' style='margin-bottom: 10px;'>
+				<a href='#'><i class='iconfont'>&#xe7ad;</i></a>
+				<div class='mui-mbar-tab-tip-icon' id='mysidecode'>
+					<img src='images/sasa_wechat.jpg' />
+					<i class='iconfont'>&#xe775;</i>
+				</div>
+			</div>
+			<div class='mui-mbar-tab sideup'>
+				<a href='#'><i class='iconfont'>&#xe76d;</i>TOP</a>
+			</div>
+		</div>
+		<!--尾部-->
+		<div id='footer_helper'>
+			<div class='sasa_promise_wrapper'>
+				<div class='sasa_promise clearfix'>
+					<dl class='sasa_promise_items clearfix'>
+						<dt class='sasa_promise_con1'></dt>
+						<dd class='sasa_promise_content1'>
+							<h3>满¥168免邮</h3>
+							<p>适用于保税仓商品</p>
+						</dd>
+					</dl>
+					<dl class='sasa_promise_items clearfix'>
+						<dt class='sasa_promise_con2'></dt>
+						<dd class='sasa_promise_content2'>
+							<h3>正品保证</h3>
+							<p>专注美妆护肤39年</p>
+						</dd>
+					</dl>
+					<dl class='sasa_promise_items clearfix'>
+						<dt class='sasa_promise_con3'></dt>
+						<dd class='sasa_promise_content3'>
+							<h3>香港直邮</h3>
+							<p>香港直发 美丽到家</p>
+						</dd>
+					</dl>
+					<dl class='sasa_promise_items clearfix'>
+						<dt class='sasa_promise_con4'></dt>
+						<dd class='sasa_promise_content4'>
+							<h3>30天退换保证</h3>
+							<p>为您提供售后无忧保障</p>
+						</dd>
+					</dl>
+					<dl class='sasa_promise_items sasa_promise_items_last clearfix'>
+						<dt class='sasa_promise_con5'></dt>
+						<dd class='sasa_promise_content5'>
+							<h3>香港上市</h3>
+							<p>股票代码: HK00178</p>
+						</dd>
+					</dl>
+				</div>
+				<div class='sasa_promise_server'>
+					<div class='helper-item-wrapper-rs clearfix'>
+						<ul class='helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>新手上路</a></h3>
+							</li>
+							<li><a href='#'>购物流程</a></li>
+							<li><a href='#'>优惠券说明</a></li>
+							<li><a href='#'>常见问题</a></li>
+							<li><a href='#'>联络我们</a></li>
+							<li><a href='#'>购物流程</a></li>
+							<li><a href='#'>购物流程</a></li>
+							<li><a href='#'>常见问题</a></li>
+						</ul>
+						<ul class='helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>付款方式</a></h3>
+							</li>
+							<li><a href='#'>在线支付</a></li>
+							<li><a href='#'>积分支付</a></li>
+						</ul>
+						<ul class='helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>配送方式</a></h3>
+							</li>
+							<li><a href='#'>配送说明</a></li>
+							<li><a href='#'>跟踪订单</a></li>
+						</ul>
+						<ul class='helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>售后服务</a></h3>
+							</li>
+							<li><a href='#'>正平保证</a></li>
+							<li><a href='#'>价格承若</a></li>
+							<li><a href='#'>30日退换保证</a></li>
+							<li><a href='#'>退款程序</a></li>
+							<li><a href='#'>更改订单</a></li>
+						</ul>
+						<ul class='helper-item-rs helper-item-rs'>
+							<li class='helper-item-rs_title'>
+								<h3><a href='#'>莎莎会员</a></h3>
+							</li>
+							<li><a href='#'>积分奖赏</a></li>
+							<li><a href='#'>VIP会员计划</a></li>
+						</ul>
+					</div>
+					<div calss='footer_right clearfix'>
+						<div class='btom-code'>
+							<div class='btom-code_img'>
+								<img src='images/sasa_wechat.jpg' alt='莎莎官方微信'/>
+							</div>
+							<p>莎莎官方微信</p>
+							<p>ID:hksasadotcom</p>
+						</div>
+						<div class='btom-code btom-code2'>
+							<div class='btom-code_img'>
+								<img src='images/sasa_weion.jpg' alt='莎莎官方微博'/>
+							</div>
+							<p>莎莎官方微博</p>
+							<p>@莎莎网</p>
+						</div>
+					</div>
+				</div>
+				<div class='sasa_promise_img'>
+					<a href='#'>
+						<img src='images/all_icon.jpg' />
+					</a>
+				</div>
+			</div>
+		</div>
+	
+		<!--底部-->
+		<div id='footer_box'>
+			<div class='footer'>
+				<p class='footer_linkboard'>
+					<a href='#'>关于莎莎</a>
+					<span>|</span>
+					<a href='#'>使用条款</a>
+					<span>|</span>
+					<a href='#'>隐私策略</a>
+					<span>|</span>
+					<a href='#'>批发服务</a>
+					<span>|</span>
+					<a href='#'>招商合作</a>
+					<span>|</span>
+					<a href='#'>帮助中心</a>
+					<span>|</span>
+					<a href='#'>人才招聘</a>
+					<span>|</span>
+					<a href='#'>联络我们</a>
+					<span>|</span>
+					<a href='#'>其他送货地区</a>
+				</p>
+				<p class='footer_Copyright'>Copyright 2000-2017 Sa Sa dot Com Limited 版权所有莎莎国际控股有限公司成员</p>
+			</div>
+		</div>
+	
+	</body>
+</html>

@@ -1,0 +1,65 @@
+[
+		{	
+		"smallimg":[
+					"images/cyber1_1.jpg","images/cyber2_1.jpg","images/cyber3_1.jpg",
+					"images/cyber4_1.jpg","images/cyber4_1.jpg"
+					],
+		"middleimg":[
+					"images/cyber1_2.jpg","images/cyber2_2.jpg","images/cyber3_2.jpg",
+					"images/cyber4_2.jpg","images/cyber5_2.jpg"
+					],
+		"bigimg":[
+				"images/cyber1_3.jpg","images/cyber2_3.jpg","images/cyber3_3.jpg",
+				"images/cyber4_3.jpg","images/cyber5_3.jpg"
+				],
+		"maintitle":" 鳄梨油、芦荟及维他命E，保护你的唇部免受干燥及自由基的侵害。",
+		"yew":"[保税仓直送]",
+		"subhead":"CYBER COLORS",
+		"quality":"鳄梨油润唇膏 (3.6克) ",
+		"result":["滋润"],
+		"newprice":"￥44.0",
+		"oldprice":"￥77.0"
+	},
+	{	
+		"smallimg":[
+					"images/arden1_1.jpg","images/arden2_1.jpg","images/arden3_1.jpg",
+					"images/arden4_1.jpg","images/arden5_1.jpg"
+					],
+		"middleimg":[
+					"images/arden1_2.jpg","images/arden2_2.jpg","images/arden3_2.jpg",
+					"images/arden4_2.jpg","images/arden5_2.jpg"
+					],
+		"bigimg":[
+				"images/arden1_3.jpg","images/arden2_3.jpg","images/arden3_3.jpg",
+				"images/arden4_3.jpg","images/arden5_3.jpg"
+				],
+		"maintitle":" Elizabeth Arden (伊莉萨白雅顿) 无瑕未来亮采美肌套装(2件套)",
+		"yew":"[保税仓直送]",
+		"subhead":"伊丽莎白 · 雅顿",
+		"quality":"无瑕未来亮采美肌套装  (2件) ",
+		"result":["滋润"],
+		"newprice":"￥500.0",
+		"oldprice":"￥833.0"
+	},
+	{	
+		"smallimg":[
+					"images/skin1_1.jpg","images/skin2_1.jpg","images/skin3_1.jpg",
+					"images/arden4_1.jpg","images/arden5_1.jpg"
+					],
+		"middleimg":[
+					"images/skin1_2.jpg","images/skin2_2.jpg","images/skin3_2.jpg",
+					"images/arden4_2.jpg","images/arden5_2.jpg"
+					],
+		"bigimg":[
+				"images/skin1_3.jpg","images/skin2_3.jpg","images/skin3_3.jpg",
+				"images/skin4_3.jpg","images/skin5_3.jpg"
+				],
+		"maintitle":"蕴内含螺旋蜗牛分泌液，拥有优秀的修护、保湿、抗皱效果，高效保湿锁水，有助修护痘印、抚平细纹，使肌肤重回饱满水润，展现弹性、光采。",
+		"yew":"[保税仓直送]",
+		"subhead":"伊思  晶钻蜗牛系列",
+		"quality":"晶钻肌肤再生霜(蜗牛霜)  (60亳升) ",
+		"result":["保湿","提亮肤色","修护","去疤/去印","提拉紧致","抗皱/去皱"],
+		"newprice":"￥500.0",
+		"oldprice":"￥833.0"
+	}
+]
