@@ -19,13 +19,21 @@
 		
 	</head>
     <body>
+
     <div id="top_wrap">
 			<div class="top_header">
+
 				<div class="top_header_left">
-					<span>欢迎光临莎莎网！</span>
-					<a href="/login/" class="top_header_login">登录</a>
-					<span>或</span>
-					<a href="/register/">免费注册</a>
+                    <span>欢迎光临莎莎网！</span>
+                    {% if tel %}
+                        <a href="/login/" class="top_header_login">用户名：{{ tel }}</a>
+                        <span>或</span>
+                        <a href="/logout/" class="top_header_login">退出</a>
+                    {% else %}
+                        <a href="/login/" class="top_header_login">登录</a>
+					    <span>或</span>
+					    <a href="/register/">免费注册</a>
+                    {% endif %}
 				</div>
 				<div class="top_header_right">
 					<ul class="header_right_list clearfix">
@@ -69,7 +77,7 @@
 										</dl>
 									</li>-->
 								</ul>
-								<div class="go_cart"><a href="/basket/">进入购物车</a></div>
+								<div class="go_cart"><a href="{% url 'app:basket' %}">进入购物车</a></div>
 							</div>
 							<i class="iconfont"></i>
 							<span>我的购物车</span>
