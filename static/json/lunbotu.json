@@ -1,9 +1,9 @@
 [
-	{"pic":"images/banner_1.jpg"},
-	{"pic":"images/banner_2.jpg"},
-	{"pic":"images/banner_3.jpg"},
-	{"pic":"images/banner_4.jpg"},
-	{"pic":"images/banner_5.jpg"},
-	{"pic":"images/banner_6.jpg"},
-	{"pic":"images/banner_7.jpg"}
+	{"pic":"/static/images/banner_1.jpg"},
+	{"pic":"/static/images/banner_2.jpg"},
+	{"pic":"/static/images/banner_3.jpg"},
+	{"pic":"/static/images/banner_4.jpg"},
+	{"pic":"/static/images/banner_5.jpg"},
+	{"pic":"/static/images/banner_6.jpg"},
+	{"pic":"/static/images/banner_7.jpg"}
 ]

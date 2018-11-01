@@ -7,7 +7,7 @@ $(function (){
 	
 	$.ajax({
 		type:"get",
-		url:"json/lunbotu.json",
+		url:"/static/json/lunbotu.json",
 		async:true,
 		success:function (data){
 			

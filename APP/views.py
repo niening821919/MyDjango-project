@@ -71,3 +71,11 @@ def logout(request):
 
 
     return response
+
+
+def list(request):
+    return render(request, 'list.html')
+
+
+def detail(request):
+    return render(request, 'detail.html')

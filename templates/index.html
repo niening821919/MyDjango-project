@@ -80,7 +80,7 @@
 								<div class="go_cart"><a href="{% url 'app:basket' %}">进入购物车</a></div>
 							</div>
 							<i class="iconfont"></i>
-							<span>我的购物车</span>
+							<span><a href="{% url 'app:basket' %}">我的购物车</a></span>
 						</li>
 						<li id="account_li">
 							<div class="account">
@@ -238,7 +238,7 @@
 									</div>
 									<div class="sasa_category_item_inner clearfix">
 										<i class="iconfont more_category_l"></i>
-										<span class="sasa_category_item_span"><a href="#">面部护肤</a></span>
+										<span class="sasa_category_item_span"><a href="{% url 'app:list' %}">面部护肤</a></span>
 										<i class="iconfont more_category_r"></i>
 									</div>
 								</li>
