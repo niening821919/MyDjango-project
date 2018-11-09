@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>列表页</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'font/iconfont.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/iconfont.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}"/>
     <script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
@@ -30,7 +30,7 @@
             <ul class='header_right_list clearfix'>
                 <li id='attention'>
                     <div class='noline'>
-                        <img src='images/sasa_wechat.jpg'/>
+                        <img src='/static/images/sasa_wechat.jpg'/>
                     </div>
                     <span>关注我们</span>
                     <i class='top_wechat'></i>
@@ -563,7 +563,7 @@
             <div class='sub_nav'>
                 <ul class='clearfix' id='sub_nav_list'>
                     <li class='sub_nav_a'>
-                        <a href='#'><img src='images/icon-store_919.gif'/></a>
+                        <a href='#'><img src='/static/images/icon-store_919.gif'/></a>
                     </li>
 
                     <li class='sub_nav_b'>/</li>
@@ -663,7 +663,7 @@
     <div class='mui-mbar-tab mysidecode' style='margin-bottom: 10px;'>
         <a href='#'><i class='iconfont'>&#xe7ad;</i></a>
         <div class='mui-mbar-tab-tip-icon' id='mysidecode'>
-            <img src='images/sasa_wechat.jpg'/>
+            <img src='/static/images/sasa_wechat.jpg'/>
             <i class='iconfont'>&#xe775;</i>
         </div>
     </div>
@@ -675,7 +675,7 @@
 <div id='msg'>
     <div class='msg_title'>
         提醒
-        <span class='close'>X<span>
+        <span class='close'>X</span>
     </div>
     <p class='success'>加入购物车成功</p>
     <div class='choice'>
@@ -688,7 +688,7 @@
 <div id='main_wrap'>
     <div class='bread-crumbs'>
         <a href='index.html' target="_blank">首页</a> /
-        <a href='#'>搜索"鳄梨油润唇膏"</a>
+        <a href="{% url 'app:detail' %}">搜索"鳄梨油润唇膏"</a>
     </div>
     <div class='filter-container'>
         <ul class='gallery_filter'>
@@ -858,7 +858,10 @@
                     </div>
 
                     <div class='arrivals-pic'>
-                        <!--图片--> <span><img src='/static/images/list1_2_1.jpg'/></span>
+                        <!--图片-->
+
+                        <span><img src='/static/images/list1_2_1.jpg'/></span>
+
 
                     </div>
                     <div class='sale-price'>

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>商品详情</title>
-		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
-		<script type="text/javascript" src='js/jquery-1.12.3.js'></script>
-		<script type="text/javascript" src='js/jquery.cookie.js'></script>
-		<script type="text/javascript" src='js/head.js'></script>
-		<script type="text/javascript" src='js/detail.js'></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'font/iconfont.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}"/>
+		<script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/head.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/detail.js' %}"></script>
 			
 		
 	</head>
@@ -28,7 +29,7 @@
 					<ul class='header_right_list clearfix'>
 						<li id='attention'>
 							<div class='noline'>
-								<img src='images/sasa_wechat.jpg' />
+								<img src='/static/images/sasa_wechat.jpg' />
 							</div>
 							<span>关注我们</span>
 							<i class='top_wechat'></i>
@@ -562,7 +563,7 @@
 					<div class='sub_nav'>
 						<ul class='clearfix' id='sub_nav_list'>
 							<li class='sub_nav_a'>
-								<a href='#'><img src='images/icon-store_919.gif' /></a>
+								<a href='#'><img src='/static/images/icon-store_919.gif' /></a>
 							</li>
 									
 							<li class='sub_nav_b'>/</li>
@@ -663,7 +664,7 @@
 			<div class='mui-mbar-tab mysidecode' style='margin-bottom: 10px;'>
 				<a href='#'><i class='iconfont'>&#xe7ad;</i></a>
 				<div class='mui-mbar-tab-tip-icon' id='mysidecode'>
-					<img src='images/sasa_wechat.jpg' />
+					<img src='/static/images/sasa_wechat.jpg' />
 					<i class='iconfont'>&#xe775;</i>
 				</div>
 			</div>
@@ -675,7 +676,7 @@
 		<div id='msg'>
 			<div class='msg_title'>
 				提醒
-				<span class='close'>X<span>
+				<span class='close'>X</span>
 			</div>
 			<p class='success'>加入购物车成功</p>
 			<div class='choice'>
@@ -726,11 +727,11 @@
 							<div class='product-album-preview'>
 								<!--中图-->
 								<a href='#'>
-									<img src='images/cyber1_2.jpg' id='middleImg' />
+									<img src='/static/images/cyber1_2.jpg' id='middleImg' />
 								</a>
 								<!--大图-->
 								<div id='big_box'>
-									<img id='bigImg' src='images/cyber1_3.jpg' />
+									<img id='bigImg' src='/static/images/cyber1_3.jpg' />
 								</div>
 								<!--放大镜-->
 								<div id='area'></div>
@@ -739,19 +740,19 @@
 							<div class='product-tips'>
 								<!--点击放大镜查看大图-->
 								<div class='product-album-zoom'><i class='iconfont'>&#xe752;</i></div>
-								<img src='images/hot_sale.png' />热卖中
-								<img src='images/goods.png' />好评中
+								<img src='/static/images/hot_sale.png' />热卖中
+								<img src='/static/images/goods.png' />好评中
 							</div>
 							<div class='product-album-thumb clearfix'>
 								<span id='prve'><i class='iconfont'>&#xe779;</i></span>
 								<!--小图-->
 								<div class='product-album_list_b'>
 									<ul class='product-album_list'>
-										<li class='bd_active'><img src='images/cyber1_1.jpg' /></li>
-										<li><img src='images/cyber2_1.jpg' /></li>
-										<li><img src='images/cyber3_1.jpg' /></li>
-										<li><img src='images/cyber4_1.jpg' /></li>
-										<li><img src='images/cyber5_1.jpg' /></li>
+										<li class='bd_active'><img src='/static/images/cyber1_1.jpg' /></li>
+										<li><img src='/static/images/cyber2_1.jpg' /></li>
+										<li><img src='/static/images/cyber3_1.jpg' /></li>
+										<li><img src='/static/images/cyber4_1.jpg' /></li>
+										<li><img src='/static/images/cyber5_1.jpg' /></li>
 									</ul>
 								</div>
 								<span id='next'><i class='iconfont'>&#xe775;</i></span>
@@ -761,7 +762,7 @@
 					</div>
 					<div class='product-main_fr'>
 						<div class='bonded-banner'>
-							<img src='images/tax-free_banner.jpg' alt='保税仓直送' />
+							<img src='/static/images/tax-free_banner.jpg' alt='保税仓直送' />
 						</div>
 						<!--标题简介-->
 						<div class='product-titles'>
@@ -847,7 +848,7 @@
 				</div>
 				<div class='guess_love_items clearfix'>
 					<dl>
-						<dt><img src='images/love_1.jpg' /></dt>
+						<dt><img src='/static/images/love_1.jpg' /></dt>
 						<dd>
 							<h3 class='tit'>
 								<a href='#'>CYBER COLORS鳄梨油润唇膏 3.6克</a>
@@ -859,7 +860,7 @@
 						</dd>
 					</dl>
 					<dl>
-						<dt><img src='images/love_2.jpg' /></dt>
+						<dt><img src='/static/images/love_2.jpg' /></dt>
 						<dd>
 							<h3 class='tit'>
 								<a href='#'>CYBER COLORS 鳄梨油润唇膏 3.6 克 x 2</a>
@@ -871,7 +872,7 @@
 						</dd>
 					</dl>
 					<dl>
-						<dt><img src='images/love_3.jpg' /></dt>
+						<dt><img src='/static/images/love_3.jpg' /></dt>
 						<dd>
 							<h3 class='tit'>
 								<a href='#'>CYBER COLORS 橄榄润唇膏 3.6克</a>
@@ -883,7 +884,7 @@
 						</dd>
 					</dl>
 					<dl>
-						<dt><img src='images/love_4.jpg' /></dt>
+						<dt><img src='/static/images/love_4.jpg' /></dt>
 						<dd>
 							<h3 class='tit'>
 								<a href='#'>CYBER COLORS 橄榄润唇膏 3.6 克 x 2</a>
@@ -895,7 +896,7 @@
 						</dd>
 					</dl>
 					<dl>
-						<dt><img src='images/love_5.jpg' /></dt>
+						<dt><img src='/static/images/love_5.jpg' /></dt>
 						<dd>
 							<h3 class='tit'>
 								<a href='#'>丰盈精华油润色唇蜜#01 Tangerine Rose 2克</a>
@@ -916,7 +917,7 @@
 					<div class='gray-content'>
 						<dl>
 							<dt>
-								<a href='#'><img src='images/red_1.jpg' /></a>
+								<a href='#'><img src='/static/images/red_1.jpg' /></a>
 							</dt>
 							<dd>
 								<p class='product-name'>
@@ -932,7 +933,7 @@
 						</dl>
 						<dl>
 							<dt>
-								<a href='#'><img src='images/red_2.jpg' /></a>
+								<a href='#'><img src='/static/images/red_2.jpg' /></a>
 							</dt>
 							<dd>
 								<p class='product-name'>
@@ -947,7 +948,7 @@
 						</dl>
 						<dl>
 							<dt>
-								<a href='#'><img src='images/red_3.jpg' /></a>
+								<a href='#'><img src='/static/images/red_3.jpg' /></a>
 							</dt>
 							<dd>
 								<p class='product-name'>
@@ -962,7 +963,7 @@
 						</dl>
 						<dl>
 							<dt>
-								<a href='#'><img src='images/red_4.jpg' /></a>
+								<a href='#'><img src='/static/images/red_4.jpg' /></a>
 							</dt>
 							<dd>
 								<p class='product-name'>
@@ -977,7 +978,7 @@
 						</dl>
 						<dl>
 							<dt>
-								<a href='#'><img src='images/red_5.jpg' /></a>
+								<a href='#'><img src='/static/images/red_5.jpg' /></a>
 							</dt>
 							<dd>
 								<p class='product-name'>
@@ -1234,14 +1235,14 @@
 					<div calss='footer_right clearfix'>
 						<div class='btom-code'>
 							<div class='btom-code_img'>
-								<img src='images/sasa_wechat.jpg' alt='莎莎官方微信'/>
+								<img src='/static/images/sasa_wechat.jpg' alt='莎莎官方微信'/>
 							</div>
 							<p>莎莎官方微信</p>
 							<p>ID:hksasadotcom</p>
 						</div>
 						<div class='btom-code btom-code2'>
 							<div class='btom-code_img'>
-								<img src='images/sasa_weion.jpg' alt='莎莎官方微博'/>
+								<img src='/static/images/sasa_weion.jpg' alt='莎莎官方微博'/>
 							</div>
 							<p>莎莎官方微博</p>
 							<p>@莎莎网</p>
@@ -1250,7 +1251,7 @@
 				</div>
 				<div class='sasa_promise_img'>
 					<a href='#'>
-						<img src='images/all_icon.jpg' />
+						<img src='/static/images/all_icon.jpg' />
 					</a>
 				</div>
 			</div>
