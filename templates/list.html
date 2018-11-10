@@ -859,10 +859,9 @@
 
                     <div class='arrivals-pic'>
                         <!--图片-->
-
-                        <span><img src='/static/images/list1_2_1.jpg'/></span>
-
-
+                        <a href="{% url 'app:detail' %}">
+                            <span><img src='/static/images/list1_2_1.jpg'/></span>
+                        </a>
                     </div>
                     <div class='sale-price'>
                         <span class='price'>￥52.0</span><!--现价-->
@@ -870,8 +869,8 @@
                         <span class='count'>6.8折</span>
                     </div>
                     <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'>[保税仓直送]</b><a href='#'>CYBER COLORS</a></p>
-                        <!--说明--> <p class='explain'><a href="#">鳄梨油润唇膏</a></p>
+                        <!--标题--> <p class='title'><b class='yew'>[保税仓直送]</b><a href="{% url 'app:detail' %}">CYBER COLORS</a></p>
+                        <!--说明--> <p class='explain'><a href="{% url 'app:detail' %}">鳄梨油润唇膏</a></p>
                         <!--重量--> <p class='quality'>3.6克 </p>
                         <p class='salenum'>已售111件</p>
                     </div>

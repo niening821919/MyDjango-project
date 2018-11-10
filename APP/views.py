@@ -1,4 +1,7 @@
-from django.http import HttpResponse
+import hashlib
+import uuid
+
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -7,62 +10,62 @@ from APP.models import User, Wheel
 
 def index(request):
     wheels = Wheel.objects.all()
-    tel = request.COOKIES.get('tel')
+    token = request.session.get('token')
     data = {
         'wheels': wheels,
-        'tel': tel,
     }
+    if token:
+        user = User.objects.get(token=token)
+        data['username'] = user.username
+
+    else:
+        pass
 
     return render(request, 'index.html', context=data)
+
+
+def genarate_password(param):
+    sha = hashlib.sha256()
+    sha.update(param.encode('utf-8'))
+    return sha.hexdigest()
 
 
 def register(request):
     if request.method == 'GET':
         return render(request, 'register.html')
     elif request.method == 'POST':
-        tel = request.POST.get('tel')
-        password = request.POST.get('password')
-        password_again = request.POST.get('password_again')
-
         user = User()
-        user.tel = tel
-        user.password = password
-        user.password_again = password_again
-
+        user.username = request.POST.get('username')
+        user.password = genarate_password(request.POST.get('password'))
+        user.token = str(uuid.uuid5(uuid.uuid4(), 'register'))
         user.save()
 
-        response = redirect('app:index')
+        request.session['token'] = user.token
 
-        response.set_cookie('tel', user.tel)
-
-
-        return response
-    else:
-        return HttpResponse('用户名或者密码错误')
-
-
-
+        return redirect('app:index')
 
 
 def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
     elif request.method == 'POST':
-        tel = request.POST.get('tel')
+        username = request.POST.get('username')
         password = request.POST.get('password')
+        print(username)
+        print(password)
 
-        users = User.objects.filter(tel=tel).filter(password=password)
-
-        if users.count():
-            user = users.first()
-
-            response = redirect('app:index')
-
-            response.set_cookie('tel', user.tel)
-
-            return response
-        else:
-            return HttpResponse('账号或者密码错误')
+        try:
+            user = User.objects.get(username=username)
+            if user.password == genarate_password(password):
+                # 更新token
+                user.token = str(uuid.uuid5(uuid.uuid4(), 'login'))
+                user.save()
+                request.session['token'] = user.token
+                return redirect('app:index')
+            else:
+                return render(request, 'login.html', context={'passwordErr': '密码错误!'})
+        except:
+            return render(request, 'login.html', context={'usernameErr': '账号不存在！'})
 
 
 def basket(request):
@@ -70,12 +73,9 @@ def basket(request):
 
 
 def logout(request):
-    response = redirect('app:index')
+    request.session.flush()
 
-    response.delete_cookie('tel')
-
-
-    return response
+    return redirect('app:index')
 
 
 def list(request):
@@ -84,3 +84,21 @@ def list(request):
 
 def detail(request):
     return render(request, 'detail.html')
+
+
+def checkuser(request):
+    username = request.GET.get('username')
+
+    responseData = {
+        'msg': '账号可以用',
+        'status': 1,
+
+    }
+
+    try:
+        user = User.objects.get(username=username)
+        responseData['msg'] = '账号已被占用'
+        responseData['status'] = -1
+        return JsonResponse(responseData)
+    except:
+        return JsonResponse(responseData)

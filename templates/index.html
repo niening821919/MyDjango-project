@@ -10,7 +10,7 @@
     <link type="text/css" href="{% static 'css/style_1.0.0.css' %}" rel='stylesheet'/>
     <link type="text/css" href="{% static 'css/reset.css' %}" rel='stylesheet'/>
     <link type="text/css" href="{% static 'css/common.css' %}" rel='stylesheet'/>
-    <link rel="stylesheet" type="text/css" href="{% static 'font/../static/css/iconfont.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/iconfont.css' %}"/>
     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
     <link rel="stylesheet" href="{% static "css/swiper.css" %}">
     <link rel="stylesheet" href="{% static "css/index1.css" %}">
@@ -29,8 +29,8 @@
 
         <div class="top_header_left">
             <span>欢迎光临莎莎网！</span>
-            {% if tel %}
-                <a href="/login/" class="top_header_login">用户名：{{ tel }}</a>
+            {% if username %}
+                <a href="/login/" class="top_header_login">您好！ {{ username }}</a>
                 <span>或</span>
                 <a href="/logout/" class="top_header_login">退出</a>
             {% else %}
