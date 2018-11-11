@@ -88,28 +88,28 @@ $(function (){
 //	}
 	
 	//点击加减
-	$('#cart_list').on('click','.btn-decrease',function (){
-//		$(this).index();
-//		console.log($(this).index('.btn-decrease'));
-		var index=$(this).index('.btn-decrease');
-		arr[index].num--;
-		if(arr[index].num<=1){
-			arr[index].num=1;
-		}
-		$.cookie('myCart',JSON.stringify(arr),{expires:30,path:'/'});
-		refresh();
-		
-	})
-	
-	$('#cart_list').on('click','.btn-increase',function (e){
-		e.stopPropagation();
-		e.preventDefault();
-		var index=$(this).index('.btn-increase');
-		arr[index].num++;
-		$.cookie('myCart',JSON.stringify(arr),{expires:30,path:'/'});
-		refresh();
-		
-	})
+// 	$('#cart_list').on('click','.btn-decrease',function (){
+// //		$(this).index();
+// //		console.log($(this).index('.btn-decrease'));
+// 		var index=$(this).index('.btn-decrease');
+// 		arr[index].num--;
+// 		if(arr[index].num<=1){
+// 			arr[index].num=1;
+// 		}
+// 		$.cookie('myCart',JSON.stringify(arr),{expires:30,path:'/'});
+// 		refresh();
+//
+// 	})
+//
+// 	$('#cart_list').on('click','.btn-increase',function (e){
+// 		e.stopPropagation();
+// 		e.preventDefault();
+// 		var index=$(this).index('.btn-increase');
+// 		arr[index].num++;
+// 		$.cookie('myCart',JSON.stringify(arr),{expires:30,path:'/'});
+// 		refresh();
+//
+// 	})
 
 	//删除
 	$('#cart_list').on('click','.J-btnDelete',function (e){

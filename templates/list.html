@@ -688,7 +688,7 @@
 <div id='main_wrap'>
     <div class='bread-crumbs'>
         <a href='index.html' target="_blank">首页</a> /
-        <a href="{% url 'app:detail' %}">搜索"鳄梨油润唇膏"</a>
+        <a href="#">搜索"鳄梨油润唇膏"</a>
     </div>
     <div class='filter-container'>
         <ul class='gallery_filter'>
@@ -846,290 +846,41 @@
 
     <div class='gallery_show'>
         <ul class='arrivalslist clearfix'>
-            <li>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='/static/images/list1_1_1.jpg'/></li>
-                            <li><img src='/static/images/list1_1_2.jpg'/></li>
-                            <li><img src='/static/images/list1_1_3.jpg'/></li>
-                        </ul>
-                    </div>
+            {% for goods in goods_list %}
+                <li>
+                    <div class='formall'>
+                        <!--鼠标移入显示小图-->
+                        <div class='formalpic'>
+                            <ul class='formalpic_list'>
+                                <li class='br_active'><img src="{{ goods.smallImg }}"/></li>
+{#                                <li><img src='/static/images/list1_1_2.jpg'/></li>#}
+{#                                <li><img src='/static/images/list1_1_3.jpg'/></li>#}
+                            </ul>
+                        </div>
 
-                    <div class='arrivals-pic'>
-                        <!--图片-->
-                        <a href="{% url 'app:detail' %}">
-                            <span><img src='/static/images/list1_2_1.jpg'/></span>
-                        </a>
+                        <div class='arrivals-pic' >
+                            <!--图片-->
+                            <a href="{% url 'app:detail' goods.goodsid %}">
+                                <span><img src="{{ goods.middleImg }}"/></span>
+                            </a>
+                        </div>
+                        <div class='sale-price'>
+                            <span class='price'>{{ goods.newPrice }}</span><!--现价-->
+                            <span class='dis'>{{ goods.oldPrice }}</span>
+                            <span class='count'>6.8折</span>
+                        </div>
+                        <div class='arrivals-info'>
+                            <!--标题--> <p class='title'><b class='yew'>[保税仓直送]</b><a href="{% url 'app:detail' goods.goodsid%}">{{ goods.title }}</a></p>
+                            <!--说明--> <p class='explain'><a href="{% url 'app:detail' goods.goodsid%}">{{ goods.quality }}</a></p>
+                            <!--重量--> <p class='quality'>3.6克 </p>
+                            <p class='salenum'>已售111件</p>
+                        </div>
+                        <!--显示购物车-->
+                        <div class='cart_btn'>加入购物车</div>
                     </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥52.0</span><!--现价-->
-                        <span class='dis'>￥77.0</span>
-                        <span class='count'>6.8折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'>[保税仓直送]</b><a href="{% url 'app:detail' %}">CYBER COLORS</a></p>
-                        <!--说明--> <p class='explain'><a href="{% url 'app:detail' %}">鳄梨油润唇膏</a></p>
-                        <!--重量--> <p class='quality'>3.6克 </p>
-                        <p class='salenum'>已售111件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='/static/images/list2_1_1.jpg'/></li>
-                            <li><img src='/static/images/list2_1_2.jpg'/></li>
-                            <li><img src='/static/images/list2_1_3.jpg'/></li>
-                        </ul>
-                    </div>
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list2_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥103.0</span><!--现价-->
-                        <span class='dis'>￥110.0</span>
-                        <span class='count'>9.4折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'>[保税仓直送]</b><a href='#'>伊丽莎白 · 雅顿</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>8小时系列经典润泽唇膏SPF15</a></p>
-                        <!--重量--> <p class='quality'>3.7克 </p>
-                        <p class='salenum'>已售11件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='/static/images/list3_1_1.jpg'/></li>
-                            <li><img src='/static/images/list3_1_2.jpg'/></li>
-                            <li><img src='/static/images/list3_1_3.jpg'/></li>
-                        </ul>
-                    </div>
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list3_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥79.0</span><!--现价-->
-                        <span class='dis'>￥88.0</span>
-                        <span class='count'>9折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>科颜氏</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>护唇膏一号 (薄荷香)</a></p>
-                        <!--重量--> <p class='quality'> 15毫升 </p>
-                        <p class='salenum'>已售99件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li class='left'>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='/static/images/list4_1_1.jpg'/></li>
-                            <li><img src='/static/images/list4_1_2.jpg'/></li>
-                            <li><img src='/static/images/list4_1_3.jpg'/></li>
-                        </ul>
-                    </div>
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list4_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥75.0</span><!--现价-->
-                        <span class='dis'>￥88.0</span>
-                        <span class='count'>8.5折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'>[保税仓直送]</b><a href='#'>科颜氏</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>护唇膏一号 (原味)</a></p>
-                        <!--重量--> <p class='quality'>15毫升 </p>
-                        <p class='salenum'>已售0件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='/static/images/list5_1_1.jpg'/></li>
-                            <li><img src='/static/images/list5_1_2.jpg'/></li>
-                            <li><img src='/static/images/list5_1_3.jpg'/></li>
-                        </ul>
-                    </div>
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list5_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥45.0</span><!--现价-->
-                        <span class='dis'>￥100.0</span>
-                        <span class='count'>4.5折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>谜尚</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>小黄人蜡笔气垫口红 #RD01 樱桃红</a></p>
-                        <!--重量--> <p class='quality'>2.5克 &nbsp; #RD01樱桃红 </p>
-                        <p class='salenum'>已售10件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='/static/images/list6_1_1.jpg'/></li>
-                            <li><img src='/static/images/list6_1_2.jpg'/></li>
-                            <li><img src='/static/images/list6_1_3.jpg'/></li>
-                        </ul>
-                    </div>
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list6_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥269.0</span><!--现价-->
-                        <span class='dis'>￥320.0</span>
-                        <span class='count'>8.4折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>圣罗兰</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>纯口红 #49 Rose Tropical</a></p>
-                        <!--重量--> <p class='quality'>3.8克 &nbsp;#49 Rose Tropical</p>
-                        <p class='salenum'>已售111件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='/static/images/list7_1_1.jpg'/></li>
-                            <li><img src='/static/images/list7_1_2.jpg'/></li>
-                            <li><img src='/static/images/list7_1_3.jpg'/></li>
-                        </ul>
-                    </div>
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list7_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥133.0</span><!--现价-->
-                        <span class='dis'>￥180.0</span>
-                        <span class='count'>7.4折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>嘉娜宝</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>唇膏 COFFRET D’OR晶漾诱色口红</a></p>
-                        <!--重量--> <p class='quality'>15毫克 #265 PINK </p>
-                        <p class='salenum'>已售1件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li class='left'>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='/static/images/list8_1_1.jpg'/></li>
-                            <li><img src='/static/images/list8_1_2.jpg'/></li>
-                            <li><img src='/static/images/list8_1_3.jpg'/></li>
-                        </ul>
-                    </div>
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list8_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥210.0</span><!--现价-->
-                        <span class='dis'>￥320.0</span>
-                        <span class='count'>6.6折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>娇兰</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>亲亲滋润护唇膏 #R371 Morning Rose</a></p>
-                        <!--重量--> <p class='quality'>2.8克 #R371 Morning Rose </p>
-                        <p class='salenum'>已售3件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li class='normal'>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <div class='formalpic'>
-                        <!--<ul class='formalpic_list'>
-                            <li class='br_active'><img src='images/list9_1_1.jpg' /></li>
-                            <li><img src='images/list9_1_2.jpg' /></li>
-                            <li><img src='images/list9_1_3.jpg' /></li>
-                        </ul>-->
-                    </div>
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list9_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥125.0</span><!--现价-->
-                        <span class='dis'>￥158.0</span>
-                        <span class='count'>7.9折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'>[保税仓直送]</b><a href='#'>LABIOTTE</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>CHATEAU LABIOTTE WINE 红酒口红 PK01</a></p>
-                        <!--重量--> <p class='quality'>3.7 克 PK01 </p>
-                        <p class='salenum'>已售21件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
-            <li class='normal'>
-                <div class='formall'>
-                    <!--鼠标移入显示小图-->
-                    <!--<div class='formalpic'>
-                        <ul class='formalpic_list'>
-                            <li class='br_active'><img src='images/list10_1_1.jpg' /></li>
-                            <li><img src='images/list10_1_2.jpg' /></li>
-                            <li><img src='images/list10_1_3.jpg' /></li>
-                        </ul>
-                    </div>-->
-                    <div class='arrivals-pic'>
-                        <!--图片	--> <span><img src='/static/images/list10_2_1.jpg'/></span>
-                    </div>
-                    <div class='sale-price'>
-                        <span class='price'>￥199.0</span><!--现价-->
-                        <span class='dis'>￥220.0</span>
-                        <span class='count'>9折</span>
-                    </div>
-                    <div class='arrivals-info'>
-                        <!--标题--> <p class='title'><b class='yew'><!--[保税仓直送]--></b><a href='#'>fresh</a></p>
-                        <!--说明--> <p class='explain'><a href='#'>澄糖滋润护唇膏 花漾裸粉</a></p>
-                        <!--重量--> <p class='quality'>4.3克 花漾裸粉 </p>
-                        <p class='salenum'>已售111件</p>
-                    </div>
-                    <!--显示购物车-->
-                    <div class='cart_btn'>加入购物车</div>
-                </div>
-            </li>
+                </li>
+            {% endfor %}
+
 
         </ul>
 

@@ -9,8 +9,10 @@ urlpatterns = [
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^basket/$', views.basket, name='basket'),
     url(r'^list/$', views.list, name='list'),
-    url(r'^detail/$', views.detail, name='detail'),
+    url(r'^detail/(\d+)/$', views.detail, name='detail'),
 
     url(r'^checkuser/$', views.checkuser, name='checkuser'),
+    url(r'^addcart/$', views.addcart, name='addcart'),
+    url(r'^subcart/$', views.subcart, name='subcart'),
 
 ]

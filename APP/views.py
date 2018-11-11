@@ -5,7 +5,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from APP.models import User, Wheel
+from APP.models import User, Wheel, Goods, Basket
 
 
 def index(request):
@@ -69,7 +69,16 @@ def login(request):
 
 
 def basket(request):
-    return render(request, 'basket.html')
+    token = request.session.get('token')
+    if token:
+        user = User.objects.get(token=token)
+        baskets = Basket.objects.filter(user=user).exclude(number=0)
+
+
+        return render(request, 'basket.html',context={'baskets':baskets})
+    else:
+        return redirect('app:login')
+
 
 
 def logout(request):
@@ -79,11 +88,27 @@ def logout(request):
 
 
 def list(request):
-    return render(request, 'list.html')
+    # 商品
+    goods_list = Goods.objects.all()
 
 
-def detail(request):
-    return render(request, 'detail.html')
+    return render(request, 'list.html', context={'goods_list': goods_list})
+
+
+def detail(request, goodsid):
+    token = request.session.get('token')
+    baskets = []
+    goods = Goods.objects.get(goodsid=goodsid)
+    if token:
+        user = User.objects.get(token=token)
+        baskets = Basket.objects.filter(user=user)
+    data = {
+        'goods': goods,
+        'baskets': baskets,
+
+    }
+
+    return render(request, 'detail.html', context=data)
 
 
 def checkuser(request):
@@ -102,3 +127,67 @@ def checkuser(request):
         return JsonResponse(responseData)
     except:
         return JsonResponse(responseData)
+
+
+
+
+
+def addcart(request):
+    goodsid = request.GET.get('goodsid')
+    token = request.session.get('token')
+
+    responseData = {
+        'msg': '添加购物车成功',
+        'status': 1,
+    }
+
+    if token:
+        # 获取用户
+        user = User.objects.get(token=token)
+        # 获取商品
+        goods = Goods.objects.get(pk=goodsid)
+
+        # 商品存在就改数量 不存在就加入一条新数据
+        baskets = Basket.objects.filter(user=user).filter(goods=goods)
+        if baskets.exists():
+            basket = baskets.first()
+            basket.number = basket.number+1
+            basket.save()
+            responseData['number'] = basket.number
+        else:
+            basket = Basket()
+            basket.user = user
+            basket.goods = goods
+            basket.number = 1
+            basket.save()
+
+            responseData['number'] = basket.number
+
+        return JsonResponse(responseData)
+    else:
+        responseData['msg'] = '未登录，请登陆后操作'
+        responseData['status'] = -1
+        return JsonResponse(responseData)
+
+
+def subcart(request):
+    # 获取数据
+    token = request.session.get('token')
+    goodsid = request.GET.get('goodsid')
+
+    # 对应的用户 和 商品
+    user = User.objects.get(token=token)
+    goods = Goods.objects.get(pk=goodsid)
+
+    # 删减操作
+    basket = Basket.objects.filter(user=user).filter(goods=goods).first()
+    basket.number = basket.number - 1
+    basket.save()
+
+    responseData = {
+        'msg': '购物车减操作',
+        'status': 1,
+        'number': basket.number,
+    }
+
+    return JsonResponse(responseData)
