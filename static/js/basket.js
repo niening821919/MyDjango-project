@@ -2,7 +2,7 @@
 $(function (){
 	
 	var arr=[];
-	refresh();
+	// refresh();
 	function refresh(){
 		arr=$.cookie('myCart')==undefined?[]:JSON.parse($.cookie('myCart'));
 		console.log(arr);

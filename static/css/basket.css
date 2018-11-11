@@ -44,7 +44,7 @@
 	margin: 80px auto;
 	background: #fff;
 	overflow:hidden;
-	/*display: none;*/
+	display: none;
 }
 .cart-emptytext{
 	font-size: 18px;
@@ -136,7 +136,7 @@
 }
 /*有商品显示*/
 #main_shop{
-	/*display: none;*/
+	/*display: block;*/
 	width: 985px;
 	margin: 30px auto;
 	background: #fff;
