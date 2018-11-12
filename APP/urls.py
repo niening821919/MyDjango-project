@@ -16,5 +16,7 @@ urlpatterns = [
     url(r'^subcart/$', views.subcart, name='subcart'),
     url(r'^changecartstatus/$', views.changecartstatus, name='changecartstatus'),
     url(r'^changecartselect/$', views.changecartselect, name='changecartselect'),
-    url(r'^cartDelete/$', views.cartDelete, name='cartDelete'),
+
+    url(r'^generateorder/$', views.generateorder, name='generateorder'),
+    url(r'^orderinfo/(\d+)/$', views.orderinfo, name='orderinfo'),
 ]

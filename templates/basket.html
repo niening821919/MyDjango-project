@@ -169,7 +169,9 @@
                         {#                    <span class='btn-increase'>+</span>#}
                     </div>
                     <div class='J-subtotal'>{{ basket.goods.oldPrice }}</div>
-                    <div class='J-btnDelete'>删除</div>
+{#                    <div class='J-btnDelete'>#}
+{#                        <span class="delGoods" basketid="{{ basket.id }}">删除</span>#}
+{#                    </div>#}
                 </li>
             {% endfor %}
 
@@ -220,7 +222,7 @@
             <div class='shop_nums'>共 <b class='red items-quantity'></b>件商品</div>
             <div class='account_totals'>商品应付金额<span class='promotion-subtotal'>￥{{ total }}</span>
             </div>
-            <button class='btn_account'>结账</button>
+            <button class='btn_account' id="generateorder">下单</button>
         </div>
 
 

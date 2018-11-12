@@ -48,3 +48,30 @@ class Basket(models.Model):
         db_table = 'sasa_basket'
 
 
+#订单
+# 一个用户 对应 多个订单
+# 在从表声明关系
+class Order(models.Model):
+    # 用户
+    user = models.ForeignKey(User)
+    # 创建时间
+    createtime = models.DateTimeField(auto_now_add=True)
+    # 状态
+    # -1 过期
+    # 1 未付款
+    # 3 已发货
+    status = models.IntegerField(default=1)
+    # 订单号
+    identifier = models.CharField(max_length=256)
+
+# 订单商品
+# 一个订单 对应 多个商品
+# 在从表声明关系
+class OrderGoods(models.Model):
+    # 订单
+    order = models.ForeignKey(Order)
+    # 商品
+    goods = models.ForeignKey(Goods)
+    # 个数
+    number = models.IntegerField(default=1)
+

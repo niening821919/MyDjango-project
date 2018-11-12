@@ -1,11 +1,13 @@
 import hashlib
+import random
+import time
 import uuid
 
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from APP.models import User, Wheel, Goods, Basket
+from APP.models import User, Wheel, Goods, Basket, Order, OrderGoods
 
 
 def index(request):
@@ -236,5 +238,39 @@ def changecartselect(request):
     return JsonResponse({'msg': '全选成功',"total":total})
 
 
-def cartDelete(request):
-    return JsonResponse({'msg': '删除成功'})
+def generateorder(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    # 生成订单
+    order = Order()
+    order.user = user
+    order.identifier = str(int(time.time())) + str(random.randrange(10000, 100000))
+    order.save()
+
+    # 订单商品
+    baskets = Basket.objects.filter(user=user).filter(isselect=True)
+    for basket in baskets:
+        orderGoods = OrderGoods()
+        orderGoods.order = order
+        orderGoods.goods = basket.goods
+        orderGoods.number = basket.number
+        orderGoods.save()
+
+        responseData = {
+            'msg': '订单生成成功',
+            'status': 1,
+            'identifier': order.identifier,
+        }
+
+        # 从购物车移除
+        basket.delete()
+
+    return JsonResponse(responseData)
+
+
+def orderinfo(request, identifier):
+    # 一个订单 对应 多个商品
+    order = Order.objects.get(identifier=identifier)
+
+
+    return render(request, 'orderinfo.html', context={'order': order})
