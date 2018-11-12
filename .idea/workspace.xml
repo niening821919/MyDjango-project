@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f6927f9e-3b1d-4468-813c-683353d532ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/basket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/APP/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/APP/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/APP/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sasa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sasa/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basket.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,15 +56,15 @@
     <session id="1402009754">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.37" value="2" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.44" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -72,11 +74,11 @@
           <entry key="django_migrations" value="2" />
           <entry key="html" value="29" />
           <entry key="jpg" value="18" />
-          <entry key="js" value="21" />
+          <entry key="js" value="22" />
           <entry key="json" value="20" />
-          <entry key="py" value="29" />
-          <entry key="sasa_basket" value="9" />
-          <entry key="sasa_goods" value="26" />
+          <entry key="py" value="31" />
+          <entry key="sasa_basket" value="15" />
+          <entry key="sasa_goods" value="29" />
           <entry key="sasa_user" value="22" />
           <entry key="sasa_wheel" value="5" />
           <entry key="sql" value="5" />
@@ -85,34 +87,34 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="23" />
-          <entry key="Database Element" value="67" />
+          <entry key="Database Element" value="76" />
           <entry key="HTML" value="29" />
           <entry key="Image" value="18" />
           <entry key="JSON" value="20" />
-          <entry key="JavaScript" value="21" />
-          <entry key="Python" value="29" />
+          <entry key="JavaScript" value="22" />
+          <entry key="Python" value="31" />
           <entry key="Scratch" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="73" />
+          <entry key="cell" value="76" />
           <entry key="css" value="131" />
-          <entry key="html" value="1783" />
-          <entry key="js" value="1431" />
+          <entry key="html" value="1947" />
+          <entry key="js" value="2820" />
           <entry key="json" value="21" />
-          <entry key="py" value="3819" />
+          <entry key="py" value="4589" />
           <entry key="sql" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="131" />
-          <entry key="HTML" value="1783" />
+          <entry key="HTML" value="1947" />
           <entry key="JSON" value="21" />
-          <entry key="JavaScript" value="1431" />
-          <entry key="Python" value="3819" />
-          <entry key="Scratch" value="152" />
+          <entry key="JavaScript" value="2820" />
+          <entry key="Python" value="4589" />
+          <entry key="Scratch" value="155" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -120,23 +122,26 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.471668">
+    <splitter split-orientation="horizontal" split-proportion="0.29209897">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/detail.html">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/basket.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="86">
-                  <caret line="808" column="33" lean-forward="true" selection-start-line="808" selection-start-column="33" selection-end-line="808" selection-end-column="33" />
+                <state relative-caret-position="24">
+                  <caret line="153" column="39" lean-forward="true" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/basket.html">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/APP/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-810">
-                  <caret line="161" column="26" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#0#32#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -157,13 +162,14 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/APP/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="77" column="62" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="62" />
+                <state relative-caret-position="355">
+                  <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                     <element signature="e#3264#4232#0" />
                     <element signature="e#4261#4738#0" />
-                    <marker date="1541927160556" expanded="false" signature="554:649" ph="..." />
+                    <element signature="e#4776#5077#0" />
+                    <marker date="1542002505825" expanded="false" signature="554:649" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -172,8 +178,21 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/static/js/basket.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+                <state relative-caret-position="180">
+                  <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#486#502#0" />
+                    <element signature="e#3341#3348#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sasa/settings.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -181,10 +200,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/APP/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="146">
-                  <caret line="38" selection-start-line="38" selection-end-line="38" />
+                <state relative-caret-position="138">
+                  <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
                   <folding>
-                    <marker date="1541927160552" expanded="true" signature="313:318" ph="..." />
+                    <marker date="1541995121397" expanded="true" signature="313:318" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -227,6 +246,8 @@
       <find>mui</find>
       <find>add_cart</find>
       <find>cart-empty</find>
+      <find>goods</find>
+      <find>checkstatus</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -237,7 +258,6 @@
       <list>
         <option value="$PROJECT_DIR$/APP/__init__.py" />
         <option value="$PROJECT_DIR$/sasa/__init__.py" />
-        <option value="$PROJECT_DIR$/sasa/settings.py" />
         <option value="$PROJECT_DIR$/static/json/lunbotu.json" />
         <option value="$PROJECT_DIR$/static/css/common.css" />
         <option value="$PROJECT_DIR$/static/css/style_1.0.0.css" />
@@ -258,15 +278,16 @@
         <option value="$PROJECT_DIR$/static/js/list.js" />
         <option value="$PROJECT_DIR$/templates/list.html" />
         <option value="$PROJECT_DIR$/static/css/detail.css" />
-        <option value="$PROJECT_DIR$/APP/models.py" />
-        <option value="$PROJECT_DIR$/APP/urls.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/APP/views.py" />
         <option value="$PROJECT_DIR$/static/js/detail.js" />
         <option value="$PROJECT_DIR$/templates/detail.html" />
-        <option value="$PROJECT_DIR$/templates/basket.html" />
-        <option value="$PROJECT_DIR$/static/js/basket.js" />
         <option value="$PROJECT_DIR$/static/css/basket.css" />
+        <option value="$PROJECT_DIR$/APP/models.py" />
+        <option value="$PROJECT_DIR$/sasa/settings.py" />
+        <option value="$PROJECT_DIR$/templates/basket.html" />
+        <option value="$PROJECT_DIR$/APP/urls.py" />
+        <option value="$PROJECT_DIR$/APP/views.py" />
+        <option value="$PROJECT_DIR$/static/js/basket.js" />
       </list>
     </option>
   </component>
@@ -290,13 +311,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="MyDjango-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyDjango-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyDjango-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyDjango-project" type="462c0819:PsiDirectoryNode" />
+              <item name="APP" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyDjango-project" type="b2602c69:ProjectViewProjectNode" />
@@ -313,6 +338,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,7 +415,7 @@
     <frame x="67" y="25" width="1295" height="590" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16360734" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16280925" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -403,14 +429,14 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49880287" weight="0.37634408" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49880287" weight="0.37419355" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5011971" side_tool="true" weight="0.372043" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32960895" />
-      <window_info anchor="right" id="Database" order="4" weight="0.1292897" />
+      <window_info anchor="right" id="Database" order="4" weight="0.26177174" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15163608" />
@@ -444,13 +470,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sasa/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1565">
-          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/register.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -580,96 +599,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APP/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-786">
           <caret line="128" column="16" lean-forward="true" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ee29d1e0-e966-4493-bfed-4da933fed904/schema/MyDjango_sql/table/sasa_goods">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/head.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2205">
-          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APP/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <marker date="1541927160552" expanded="true" signature="313:318" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="808" column="33" lean-forward="true" selection-start-line="808" selection-start-column="33" selection-end-line="808" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ee29d1e0-e966-4493-bfed-4da933fed904/schema/MyDjango_sql/table/sasa_basket">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
-          <folding>
-            <element signature="e#202#358#0" />
-            <element signature="e#389#904#0" />
-            <element signature="e#966#2117#0" />
-            <element signature="e#2166#2608#0" />
-            <element signature="e#2655#2811#0" />
-            <element signature="e#2847#2988#0" />
-            <element signature="e#3046#3788#0" />
-            <element signature="e#3803#3818#0" />
-            <element signature="e#3905#4302#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APP/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="77" column="62" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#3264#4232#0" />
-            <element signature="e#4261#4738#0" />
-            <marker date="1541927160556" expanded="false" signature="554:649" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
-          <caret line="161" column="26" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -712,10 +645,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="789" column="61" lean-forward="true" selection-start-line="789" selection-start-column="61" selection-end-line="789" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/head.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2205">
+          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="244" column="46" selection-start-line="244" selection-start-column="46" selection-end-line="244" selection-end-column="46" />
+          <folding>
+            <element signature="e#202#358#0" />
+            <element signature="e#389#904#0" />
+            <element signature="e#966#2117#0" />
+            <element signature="e#2166#2608#0" />
+            <element signature="e#2655#2811#0" />
+            <element signature="e#2847#2988#0" />
+            <element signature="e#3046#3788#0" />
+            <element signature="e#3803#3818#0" />
+            <element signature="e#3905#4302#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ee29d1e0-e966-4493-bfed-4da933fed904/schema/MyDjango_sql/table/sasa_basket">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ee29d1e0-e966-4493-bfed-4da933fed904/schema/MyDjango_sql/table/sasa_goods">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sasa/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APP/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding>
+            <marker date="1541995121397" expanded="true" signature="313:318" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APP/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/basket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="153" column="39" lean-forward="true" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APP/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#3264#4232#0" />
+            <element signature="e#4261#4738#0" />
+            <element signature="e#4776#5077#0" />
+            <marker date="1542002505825" expanded="false" signature="554:649" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/basket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="180">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <element signature="e#486#502#0" />
+            <element signature="e#3341#3348#0" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -27,7 +27,7 @@ class Goods(models.Model):
     yew = models.CharField(max_length=100, default='')
     quality = models.CharField(max_length=30, default='')
     result = models.CharField(max_length=30, default='')
-    newPrice = models.CharField(max_length=10, default='')
+    newPrice = models.DecimalField(max_digits=7, decimal_places=2)
     oldPrice = models.CharField(max_length=10, default='')
 
     class Meta:

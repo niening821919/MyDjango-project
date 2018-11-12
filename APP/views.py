@@ -74,11 +74,14 @@ def basket(request):
         user = User.objects.get(token=token)
         baskets = Basket.objects.filter(user=user).exclude(number=0)
 
+        total = 0
+        for cart in baskets:
+            if cart.isselect:
+                total += cart.number * cart.goods.newPrice
 
-        return render(request, 'basket.html',context={'baskets':baskets})
+        return render(request, 'basket.html', context={'baskets': baskets, "total": total})
     else:
         return redirect('app:login')
-
 
 
 def logout(request):
@@ -90,7 +93,6 @@ def logout(request):
 def list(request):
     # 商品
     goods_list = Goods.objects.all()
-
 
     return render(request, 'list.html', context={'goods_list': goods_list})
 
@@ -129,9 +131,6 @@ def checkuser(request):
         return JsonResponse(responseData)
 
 
-
-
-
 def addcart(request):
     goodsid = request.GET.get('goodsid')
     token = request.session.get('token')
@@ -151,7 +150,7 @@ def addcart(request):
         baskets = Basket.objects.filter(user=user).filter(goods=goods)
         if baskets.exists():
             basket = baskets.first()
-            basket.number = basket.number+1
+            basket.number = basket.number + 1
             basket.save()
             responseData['number'] = basket.number
         else:
@@ -191,3 +190,51 @@ def subcart(request):
     }
 
     return JsonResponse(responseData)
+
+
+def changecartstatus(request):
+    basketid = request.GET.get('basketid')
+    basket = Basket.objects.get(pk=basketid)
+    basket.isselect = not basket.isselect
+    basket.save()
+
+    carts = Basket.objects.filter(user=User.objects.get(token=request.session.get("token")), isselect=True)
+    total = 0
+    for cart in carts:
+        total += cart.number * cart.goods.newPrice
+
+    responseData = {
+        'msg': "选中状态改变",
+        'status': 1,
+        'isselect': basket.isselect,
+        "total": total,
+    }
+    return JsonResponse(responseData)
+
+
+def changecartselect(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    baskets = Basket.objects.filter(user=user)
+    isselect = request.GET.get('isselect')
+    total = 0
+    if isselect == 'true':
+        isselect = True
+    else:
+        isselect = False
+
+    for basket in baskets:
+        if isselect:
+            basket.isselect = 1
+            basket.save()
+            total += basket.number * basket.goods.newPrice
+
+        else:
+            basket.isselect = 0
+            basket.save()
+
+    return JsonResponse({'msg': '全选成功',"total":total})
+
+
+def cartDelete(request):
+    return JsonResponse({'msg': '删除成功'})

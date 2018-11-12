@@ -144,7 +144,7 @@
         <ul class='cart_list' id='cart_list'>
             <li class='cart_title'>
                 <div class='title_allChecked'>
-                    <input type='checkbox'>全选
+                    <input type='checkbox' class="checkall"  checked="checked">全选
                 </div>
                 <div class='title_user'>商品名称</div>
                 <div class='title_price'>单价</div>
@@ -152,24 +152,25 @@
                 <div class='title_totals'>小计</div>
             </li>
             {% for basket in baskets %}
-                <li class='cart_detail'>
-                <div class='J-pic'>
-                    <input type='checkbox' />
-                    <a href='#'><img src={{ basket.goods.smallImg }} /></a>
-                </div>
-                <div class='J-state'>
-                    <p class='ui-carttable-title'><a href='#'>{{ basket.goods.quality }}</a></p>
-                    <p class='ui-carttable-spec'>3.6克</p>
-                </div>
-                <div class='J-price'>{{ basket.goods.newPrice }}</div>
-                <div class='J-quantity'>
-{#                    <span class='btn-decrease'>-</span>#}
-                    <span class='shop_num'>{{ basket.number }}</span>
-{#                    <span class='btn-increase'>+</span>#}
-                </div>
-                <div class='J-subtotal'>{{ basket.goods.oldPrice }}</div>
-                <div class='J-btnDelete'><a href='#'>删除</a></div>
-            </li>
+                <li class='cart_detail goods'>
+                    <div class='J-pic'>
+                        <input type='checkbox' checked="checked" basketid="{{ basket.id }}"
+                               isselect="{{ basket.isselect }}" class="checkstatus"/>
+                        <a href='#'><img src={{ basket.goods.smallImg }}/></a>
+                    </div>
+                    <div class='J-state'>
+                        <p class='ui-carttable-title'><a href='#'>{{ basket.goods.quality }}</a></p>
+                        <p class='ui-carttable-spec'>3.6克</p>
+                    </div>
+                    <div class='J-price' price="{{ basket.goods.newPrice }}">￥{{ basket.goods.newPrice }}</div>
+                    <div class='J-quantity'>
+                        {#                    <span class='btn-decrease'>-</span>#}
+                        <span class='shop_num' number="{{ basket.number }}">x{{ basket.number }}</span>
+                        {#                    <span class='btn-increase'>+</span>#}
+                    </div>
+                    <div class='J-subtotal'>{{ basket.goods.oldPrice }}</div>
+                    <div class='J-btnDelete'>删除</div>
+                </li>
             {% endfor %}
 
             <!--<li class='cart_detail'>
@@ -216,8 +217,8 @@
     <div class='ui-cartfoot-check clearfix'>
         <div class='ui-cartfoot-link'><a href='list.html' target="_blank">继续购物</a><a href='#'>清空购物车</a></div>
         <div class='ui-cartfoot_fr'>
-            <div class='shop_nums'>共 <b class='red items-quantity'>10</b>件商品</div>
-            <div class='account_totals'>商品应付金额<span class='promotion-subtotal'>¥0.0</span>
+            <div class='shop_nums'>共 <b class='red items-quantity'></b>件商品</div>
+            <div class='account_totals'>商品应付金额<span class='promotion-subtotal'>￥{{ total }}</span>
             </div>
             <button class='btn_account'>结账</button>
         </div>
